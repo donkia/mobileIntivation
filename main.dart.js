@@ -63276,7 +63276,7 @@ $.Nq().t2("map-element",new A.a5r(),!0)},
 S(a){return B.F9}}
 A.a5r.prototype={
 $1(a){var s,r=document.createElement("iframe")
-r.src="assets/map.html"
+r.src="assets/assets/map.html"
 s=r.style
 s.border="none"
 return r},
