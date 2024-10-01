@@ -17,7 +17,7 @@ class _NaverMapState extends State<NaverMap> {
     // 'map-element' 타입을 등록
     ui.platformViewRegistry.registerViewFactory('map-element', (int viewId) {
       final iframe = html.IFrameElement()
-        ..src = 'assets/map.html'
+        ..src = 'assets/assets/map.html'
         ..style.border = 'none'; // IFrame 테두리 제거
       return iframe;
     });

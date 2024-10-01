@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <title>Flutter Naver Map</title> -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ms3kigl35y"></script>
+    <style>
+      html, body, #map {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(37.5582510, 127.0344189), // 서울시청 좌표
+        zoom: 15
+      });
+
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.5582510, 127.0344189),
+        map: map
+      });
+    </script>
+  </body>
+</html>
+
