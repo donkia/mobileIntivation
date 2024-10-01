@@ -39,9 +39,13 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Image.asset(
-              'assets/images/1.jpg',
-              // height: 500,
+            SizedBox(
+              width: 512,
+              height: 512,
+              child: Image.asset(
+                'assets/images/1.jpg',
+                // height: 500,
+              ),
             ),
             const SizedBox(
               height: 20,
@@ -60,9 +64,13 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Image.asset(
-              'assets/images/2.jpg',
-              //height: 30,
+            SizedBox(
+              height: 512,
+              width: 512,
+              child: Image.asset(
+                'assets/images/2.jpg',
+                //height: 30,
+              ),
             ),
             const SizedBox(
               height: 30,
