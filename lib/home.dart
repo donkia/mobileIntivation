@@ -213,13 +213,10 @@ class Home extends StatelessWidget {
             ),
             */
             // 네이버지도 연동 임시 주석. 개발에 따른 사용량 증가
-            /*
             const SizedBox(
               height: 400,
               child: NaverMap(),
             ),
-
-*/
             const SizedBox(
               height: 30,
             ),

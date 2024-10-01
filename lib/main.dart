@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Home(),
-      // theme: ThemeData(fontFamily: 'MaruBuri'),
+    return MaterialApp(
+      home: const Home(),
+      theme: ThemeData(fontFamily: 'MaruBuri'),
     );
   }
 }
