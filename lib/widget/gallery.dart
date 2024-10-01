@@ -19,6 +19,7 @@ class ImageGridScreen extends StatelessWidget {
     'assets/images/6.jpg',
     'assets/images/7.jpg',
     'assets/images/8.jpg',
+    /*
     'assets/images/9.jpg',
     'assets/images/10.jpg',
     'assets/images/11.jpg',
@@ -28,6 +29,7 @@ class ImageGridScreen extends StatelessWidget {
     'assets/images/15.jpg',
     'assets/images/16.jpg',
     'assets/images/17.jpg',
+    */
   ];
 
   @override
