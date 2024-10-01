@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
               width: 512,
               height: 512,
               child: Image.asset(
-                'assets/images/1.jpg',
+                'assets/images/1.png',
                 // height: 500,
               ),
             ),
