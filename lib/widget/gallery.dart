@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_invitation/widget/detailGallery.dart';
 
 class Gallery extends StatelessWidget {
   const Gallery({super.key});
@@ -34,13 +35,32 @@ class ImageGridScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, crossAxisSpacing: 10.0, mainAxisExtent: 200.0),
-          itemCount: imagePaths.length,
-          itemBuilder: (context, index) {
-            return Image.asset(imagePaths[index], fit: BoxFit.fitWidth);
-          }),
+      body: Scrollbar(
+        thumbVisibility: true, //스크롤바가 항상 보임
+        child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 10.0,
+                mainAxisExtent: 200.0),
+            itemCount: imagePaths.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DetailGallery(
+                                image: imagePaths,
+                                index: index,
+                              )));
+                },
+                child: Card(
+                    //color: Colors.white,
+                    child:
+                        Image.asset(imagePaths[index], fit: BoxFit.fitWidth)),
+              );
+            }),
+      ),
     );
   }
 }

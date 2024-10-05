@@ -4,7 +4,6 @@ import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/gallery.dart';
 import 'package:mobile_invitation/widget/naverMap.dart';
 import 'package:mobile_invitation/widget/share.dart';
-import 'dart:js' as js;
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -159,7 +158,7 @@ class Home extends StatelessWidget {
             //사진 갤러리 보여주기
             Container(
               child: const SizedBox(
-                height: 1000,
+                height: 500,
                 child: Gallery(),
               ),
             ),
@@ -262,13 +261,6 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 100,
               child: Share(),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                // JavaScript 함수 호출
-                js.context.callMethod('shareKakao');
-              },
-              child: const Text('카카오톡으로 공유하기'),
             ),
           ],
         ),
