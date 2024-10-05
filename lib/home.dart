@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/gallery.dart';
-import 'package:mobile_invitation/widget/intro.dart';
 import 'package:mobile_invitation/widget/naverMap.dart';
 import 'package:mobile_invitation/widget/share.dart';
 
