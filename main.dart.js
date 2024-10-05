@@ -65829,7 +65829,7 @@ case 8:case 3:return A.R(null,r)}})
 return A.S($async$jY,r)},
 k_(){var s=0,r=A.T(t.H),q,p
 var $async$k_=A.U(function(a,b){if(a===1)return A.Q(b,r)
-while(true)switch(s){case 0:p=A.eX("tmap://route?goalname=\ub808\ub178\uc2a4\ube14\ub791\uc26c\uc6e8\ub529\ud640&goalx=126.977969&goaly=37.566535",0,null)
+while(true)switch(s){case 0:p=A.eX("tmap://route?goalname=\ub808\ub178\uc2a4\ube14\ub791\uc26c\uc6e8\ub529\ud640&goalx=37.566535&goaly=126.977969",0,null)
 s=5
 return A.Z(A.nb(p),$async$k_)
 case 5:s=b?2:4
