@@ -37,6 +37,7 @@ class ImageGridScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: GridView.builder(
+          physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
           itemCount: imagePaths.length,
