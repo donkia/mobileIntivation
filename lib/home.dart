@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
             */
         body: SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(40.0),
         child: Column(
           children: [
             const Text(
@@ -52,7 +52,7 @@ class Home extends StatelessWidget {
               height: 20,
             ),
             const Text(
-              '2025년 1월 18일 토요일 오전 11시\n 레노스블랑쉬 블랑쉬홀',
+              '2025년 1월 18일 토요일 오전 12시\n 레노스블랑쉬 블랑쉬홀',
               textAlign: TextAlign.center,
             ),
             const SizedBox(
