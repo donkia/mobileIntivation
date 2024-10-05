@@ -36,31 +36,26 @@ class ImageGridScreen extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Scrollbar(
-        thumbVisibility: true, //스크롤바가 항상 보임
-        child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 1.0,
-                mainAxisExtent: 150.0),
-            itemCount: imagePaths.length,
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DetailGallery(
-                                image: imagePaths,
-                                index: index,
-                              )));
-                },
-                child: Card(
-                    //color: Colors.white,
-                    child: Image.asset(imagePaths[index], fit: BoxFit.cover)),
-              );
-            }),
-      ),
+      body: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
+          itemCount: imagePaths.length,
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailGallery(
+                              image: imagePaths,
+                              index: index,
+                            )));
+              },
+              child: Card(
+                  //color: Colors.white,
+                  child: Image.asset(imagePaths[index], fit: BoxFit.cover)),
+            );
+          }),
     );
   }
 }
