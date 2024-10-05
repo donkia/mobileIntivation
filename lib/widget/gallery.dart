@@ -35,13 +35,14 @@ class ImageGridScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Scrollbar(
         thumbVisibility: true, //스크롤바가 항상 보임
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
-                crossAxisSpacing: 10.0,
-                mainAxisExtent: 200.0),
+                crossAxisSpacing: 1.0,
+                mainAxisExtent: 150.0),
             itemCount: imagePaths.length,
             itemBuilder: (context, index) {
               return GestureDetector(
@@ -56,8 +57,7 @@ class ImageGridScreen extends StatelessWidget {
                 },
                 child: Card(
                     //color: Colors.white,
-                    child:
-                        Image.asset(imagePaths[index], fit: BoxFit.fitWidth)),
+                    child: Image.asset(imagePaths[index], fit: BoxFit.cover)),
               );
             }),
       ),
