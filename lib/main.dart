@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const Home(),
-      theme: ThemeData(fontFamily: 'MaruBuri'),
+      theme: ThemeData(fontFamily: 'MaruBuri', primaryColor: Colors.white),
     );
   }
 }

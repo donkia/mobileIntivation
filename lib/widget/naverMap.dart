@@ -1,6 +1,7 @@
 import 'dart:html' as html;
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class NaverMap extends StatefulWidget {
   const NaverMap({super.key});
@@ -25,8 +26,11 @@ class _NaverMapState extends State<NaverMap> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: HtmlElementView(viewType: 'map-element'), // 등록된 viewType 사용
+    return const Padding(
+      padding: EdgeInsets.all(20.0),
+      child: Scaffold(
+        body: HtmlElementView(viewType: 'map-element'), // 등록된 viewType 사용
+      ),
     );
   }
 }
