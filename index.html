@@ -22,7 +22,7 @@
   <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1207840979";
+    const serviceWorkerVersion = "974686582";
   </script>
   
   <!-- This script adds the flutter initialization JS code -->
@@ -46,6 +46,36 @@
   </script>
  
   <script src="main.dart.js" type="application/javascript"></script>
+  <!-- 카카오톡 공유 추가-->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script type="text/javascript">
+    Kakao.init('6352e7f677b9e03de58ce6686df06832'); // 발급받은 JavaScript 키를 입력하세요.
+  
+    function shareKakao() {
+      Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '김병현 & 유슬기 결혼합니다.',
+          description: '2025.01.18 토요일 오후 12시 레노스블랑쉬',
+          imageUrl: 'https://donkia.github.io/mobileIntivation/assets/assets/images/1.png',
+          link: {
+            mobileWebUrl: 'https://donkia.github.io/mobileIntivation/',
+            webUrl: 'https://donkia.github.io/mobileIntivation/'
+          }
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'https://donkia.github.io/mobileIntivation/',
+              webUrl: 'https://donkia.github.io/mobileIntivation/'
+            }
+          }
+        ]
+      });
+    }
+  </script>
+  
 
 </body>
 </html>
