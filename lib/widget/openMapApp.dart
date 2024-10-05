@@ -46,7 +46,8 @@ class OpenMapApp extends StatelessWidget {
   // 티맵 지도 앱을 실행하는 함수
   Future<void> _launchTMap() async {
     final Uri tmapUri = Uri.parse(
-        'tmap://route?goalname=레노스블랑쉬&goalx=126.977969&goaly=37.566535');
+        //'tmap://route?goalname=레노스블랑쉬웨딩홀&goalx=126.977969&goaly=37.566535');
+        'tmap://route?goalname=레노스블랑쉬웨딩홀&goalx=126.977969&goaly=37.566535');
 
     // URL을 실행할 수 있는지 확인
     if (await canLaunchUrl(tmapUri)) {
@@ -67,25 +68,39 @@ class OpenMapApp extends StatelessWidget {
     return Column(
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButton(
+          IconButton(
             onPressed: () {
               _launchNaverMap();
             },
-            child: const Text('네이버지도'),
+            icon: //const Text('네이버지도'),
+                Image.asset(
+              'assets/images/naverMap.png',
+              height: 50,
+            ),
           ),
-          ElevatedButton(
+          IconButton(
             onPressed: () {
               _launchKakaoMap();
             },
-            child: const Text('카카오지도'),
+            icon: //const Text('카카오지도'),
+                Image.asset(
+              'assets/images/kakaoMap.png',
+              height: 50,
+              // height: 500,
+            ),
           ),
-          ElevatedButton(
+          IconButton(
             onPressed: () {
               _launchTMap();
             },
-            child: const Text('티맵'),
+            icon: //const Text('티맵'),
+                Image.asset(
+              'assets/images/tMap.png',
+              height: 50,
+              // height: 500,
+            ),
           ),
-        ]),
+        ]), /*
         const Column(
           children: [
             Text('지하철/버스'),
@@ -98,7 +113,7 @@ class OpenMapApp extends StatelessWidget {
             Text('주차'),
             Text('무학여고 주차장'),
           ],
-        )
+        )*/
       ],
     );
   }

@@ -87,25 +87,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     );
   }
 
-  Future<void> _launchNaverMap() async {
-    final Uri naverMapUri = Uri.parse(
-        'nmap://place?lat=37.582510&lng=127.0344189&name=레노스블랑쉬&appname=com.example.myapp');
-    //      center: new naver.maps.LatLng(37.582510, 127.0344189),//
-
-    // URL을 실행할 수 있는지 확인
-    if (await canLaunchUrl(naverMapUri)) {
-      await launchUrl(naverMapUri);
-    } else {
-      // 앱이 설치되지 않았거나 실행할 수 없을 때 웹 브라우저로 이동
-      final Uri fallbackUri = Uri.parse('https://naver.me/xevjyQIj');
-      if (await canLaunchUrl(fallbackUri)) {
-        await launchUrl(fallbackUri);
-      } else {
-        throw 'Could not launch $naverMapUri or $fallbackUri';
-      }
-    }
-  }
-
   Widget _buildAnimatedBoldText(String text, int index) {
     // 스크롤에 따라 애니메이션이 적용되도록 조정
     double start = index * 250.0;
@@ -152,11 +133,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           controller: _scrollController,
           child: Column(
             children: [
-              const Text(
-                '병현❤️슬기',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30),
-              ),
               const SizedBox(
                 height: 10,
               ),
@@ -171,23 +147,44 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               const SizedBox(
                 height: 20,
               ),
-
+              const Text(
+                '김병현 | 유슬기',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               const Text(
                 '2025년 1월 18일 토요일 오전 12시',
-                style: TextStyle(fontWeight: FontWeight.w700),
+                //style: TextStyle(fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(
                 height: 10,
               ),
               const Text(
-                '레노스블랑쉬 블랑쉬홀',
-                style: TextStyle(fontWeight: FontWeight.w700),
+                '레노스블랑쉬웨딩홀 블랑쉬홀',
+                //style: TextStyle(fontWeight: FontWeight.w700),
                 textAlign: TextAlign.center,
               ),
-
               const SizedBox(
                 height: 80,
+              ),
+              const Text(
+                '[인사말]',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
               ),
 
               _buildAnimatedText('6번째의 계절이 지나', 0),
@@ -294,11 +291,24 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 80,
+              ),
+              const Text(
+                '[예식일시]',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
               ),
               const SizedBox(
-                height: 50,
+                height: 10,
               ),
+
               const Text(
                 '1월',
                 style: TextStyle(fontWeight: FontWeight.w700),
@@ -318,7 +328,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 ],
               ),
               const SizedBox(
-                height: 50,
+                height: 80,
+              ),
+              const Text(
+                '[갤러리]',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
               ),
               //사진 갤러리 보여주기
               Container(
@@ -330,11 +352,20 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
 
               const SizedBox(
-                height: 30,
+                height: 80,
               ),
+
               const Text(
-                '오시는길',
+                '[오시는길]',
+                textAlign: TextAlign.left,
                 style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -388,11 +419,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               const SizedBox(
                 height: 30,
               ),
-
               const Text(
-                '마음 전하실 곳',
+                '[마음 전하실 곳]',
+                textAlign: TextAlign.left,
                 style: TextStyle(fontWeight: FontWeight.w700),
               ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
+              ),
+
               const SizedBox(
                 height: 20,
               ),
