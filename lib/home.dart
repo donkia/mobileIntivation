@@ -380,8 +380,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   const Text('레노스블랑쉬웨딩홀'),
                   IconButton(
                       onPressed: () {
-                        Clipboard.setData(
-                            const ClipboardData(text: '서울특별시 성동구 행당동 319-36'));
+                        Clipboard.setData(const ClipboardData(
+                                text: '서울특별시 성동구 행당동 319-36'))
+                            .then((_) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('주소 복사가 완료되었습니다!')));
+                        });
                       },
                       icon: const Icon(
                         Icons.copy,
