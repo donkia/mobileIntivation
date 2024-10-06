@@ -444,13 +444,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
 
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               const Account(),
-              const SizedBox(
-                height: 20,
-              ),
 
+/*
               Stack(
                 alignment: Alignment.center,
                 children: [
@@ -472,15 +470,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ],
               ),
-
+*/
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
+              const Share(),
               //const Text('공유하기'),
-              const SizedBox(
-                height: 100,
-                child: Share(),
-              ),
+              // const SizedBox(
+              //   //height: 400,
+              //   child: Share(),
+              // ),
             ],
           ),
         ),
