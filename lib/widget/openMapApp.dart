@@ -47,7 +47,7 @@ class OpenMapApp extends StatelessWidget {
   Future<void> _launchTMap() async {
     final Uri tmapUri = Uri.parse(
         //'tmap://route?goalname=레노스블랑쉬웨딩홀&goalx=126.977969&goaly=37.566535');
-        'tmap://route?goalname=레노스블랑쉬웨딩홀&goalx=37.566535&goaly=126.977969');
+        'https://tmap.life/02a96d0a');
 
     // URL을 실행할 수 있는지 확인
     if (await canLaunchUrl(tmapUri)) {

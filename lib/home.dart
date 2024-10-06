@@ -370,10 +370,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               const SizedBox(
                 height: 10,
               ),
+              const Text(
+                '서울특별시 성동구 행당동 319-36',
+                textAlign: TextAlign.center,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('서울특별시 성동구 행당동 319-36'),
+                  const Text('레노스블랑쉬웨딩홀'),
                   IconButton(
                       onPressed: () {
                         Clipboard.setData(
@@ -383,12 +387,15 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         Icons.copy,
                         size: 10,
                       )),
+                  /*
                   const Text(
                     '주소 복사하기',
                     style: TextStyle(fontSize: 9),
                   )
+                  */
                 ],
               ),
+
               /*
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
