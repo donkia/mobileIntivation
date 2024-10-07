@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_invitation/widget/account.dart';
+import 'package:mobile_invitation/widget/bottom.dart';
 import 'package:mobile_invitation/widget/gallery.dart';
 import 'package:mobile_invitation/widget/naverMap.dart';
 import 'package:mobile_invitation/widget/openMapApp.dart';
@@ -201,7 +202,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
               AnimatedOpacity(
                 opacity: _opacity,
-                duration: const Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 2000),
                 child: SizedBox(
                   width: 512,
                   height: 512,
@@ -216,7 +217,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 30,
               ),
               _buildAnimatedText(
-                  '겨울의 따뜻한 햇살 아래\n 저희 두 사람이 소중한 분들을 모시고\n 사랑으로 하나되어\n 한길을 걸어가고자 합니다.',
+                  '대학교 어느 수업\n프로젝트에서 한팀이 되어 처음 만났습니다.\n 이제는 한 가정으로써\n 프로젝트를 다시 시작하려고 합니다.',
                   3),
               /*
               const Text(
@@ -230,7 +231,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 30,
               ),
               _buildAnimatedText(
-                  '한곳을 바라보며 첫발을 내딛는 자리\n 그 시작에 함께해 주시면\n 더없는 기쁨으로 간직하겠습니다.', 4),
+                  '프로젝트가 성공적으로 오픈할 수 있도록\n 참석하여 지혜와 용기를\n 저희에게 나누어주십시오.', 4),
               /*
               const Text(
                 '한곳을 바라보며 첫발을 내딛는 자리\n 그 시작에 함께해 주시면\n 더없는 기쁨으로 간직하겠습니다.',
@@ -245,7 +246,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
               AnimatedOpacity(
                 opacity: _opacity,
-                duration: const Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 2000),
                 child: SizedBox(
                   // width: 512,
                   //height: 512,
@@ -475,6 +476,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 10,
               ),
               const Share(),
+              const Buttom()
               //const Text('공유하기'),
               // const SizedBox(
               //   //height: 400,

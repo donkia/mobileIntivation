@@ -40,9 +40,6 @@ class _AccountState extends State<Account> {
             ),
           ),
         ),
-        const SizedBox(
-            //height: 2,
-            ),
         if (menShowData)
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -128,9 +125,6 @@ class _AccountState extends State<Account> {
             ),
             child: const Text('신부측 계좌번호'),
           ),
-        ),
-        const SizedBox(
-          height: 5,
         ),
         if (womenShowData)
           Column(

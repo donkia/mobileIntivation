@@ -67,9 +67,13 @@ class Share extends StatelessWidget {
                 backgroundColor: Colors.transparent),
             child: const Text(
               '카카오톡으로 공유하기',
-              style: TextStyle(color: Colors.black),
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
             ),
           ),
+          const SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
