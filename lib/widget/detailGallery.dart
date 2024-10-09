@@ -48,7 +48,9 @@ class _ImagePageState extends State<DetailGallery> {
       body: Stack(
         children: [
           Center(
-            child: Image.asset(widget.image[currentIndex], fit: BoxFit.contain),
+            //child: Image.asset(widget.image[currentIndex], fit: BoxFit.contain),
+            child:
+                Image.network(widget.image[currentIndex], fit: BoxFit.contain),
           ),
           Positioned(
               left: 20,

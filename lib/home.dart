@@ -140,8 +140,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               SizedBox(
                 width: 512,
                 height: 512,
-                child: Image.asset(
-                  'assets/images/3.jpg',
+                child: Image.network(
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/3_kfb4po.jpg',
                   // height: 500,
                 ),
               ),
@@ -206,8 +206,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 child: SizedBox(
                   width: 512,
                   height: 512,
-                  child: Image.asset(
-                    'assets/images/2.jpg',
+                  child: Image.network(
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/2_dbpjqj.jpg',
                     // height: 500,
                   ),
                 ),
@@ -250,8 +250,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 child: SizedBox(
                   // width: 512,
                   //height: 512,
-                  child: Image.asset(
-                    'assets/images/19.jpg',
+                  child: Image.network(
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/19_nlkfdx.jpg',
                     // height: 500,
                   ),
                 ),
