@@ -75,7 +75,7 @@ class OpenMapApp extends StatelessWidget {
             icon: //const Text('네이버지도'),
                 Image.asset(
               'assets/images/naverMap.png',
-              height: 50,
+              height: 30,
             ),
           ),
           IconButton(
@@ -85,7 +85,7 @@ class OpenMapApp extends StatelessWidget {
             icon: //const Text('카카오지도'),
                 Image.asset(
               'assets/images/kakaoMap.png',
-              height: 50,
+              height: 30,
               // height: 500,
             ),
           ),
@@ -96,7 +96,7 @@ class OpenMapApp extends StatelessWidget {
             icon: //const Text('티맵'),
                 Image.asset(
               'assets/images/tMap.png',
-              height: 50,
+              height: 30,
               // height: 500,
             ),
           ),

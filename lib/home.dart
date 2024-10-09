@@ -187,19 +187,30 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               const SizedBox(
                 height: 10,
               ),
-
-              _buildAnimatedText('6번째의 계절이 지나', 0),
+              const Text('6번째의 겨울이 지나'),
+              //_buildAnimatedText('6번째의 계절이 지나', 0),
               const SizedBox(
                 height: 10,
               ),
-              _buildAnimatedText('7번째 계절부터는', 1),
+              //_buildAnimatedText('7번째 계절부터는', 1),
+              const Text('7번째의 겨울부터는'),
               const SizedBox(
                 height: 10,
               ),
-              _buildAnimatedText('함께하고자 합니다.', 2),
+              //_buildAnimatedText('함께하고자 합니다.', 2),
+              const Text('사랑의 결실을 맺고자합니다.'),
               const SizedBox(
                 height: 20,
               ),
+              SizedBox(
+                width: 512,
+                height: 512,
+                child: Image.network(
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/2_dbpjqj.jpg',
+                  // height: 500,
+                ),
+              ),
+              /*
               AnimatedOpacity(
                 opacity: _opacity,
                 duration: const Duration(milliseconds: 2000),
@@ -212,13 +223,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ),
               ),
-
+*/
               const SizedBox(
                 height: 30,
               ),
+              const Text(
+                '대학교 어느 수업\n프로젝트에서 한팀이 되어 처음 만났습니다.\n이제는 한 가정으로써\n프로젝트를 다시 시작하려고 합니다.',
+                textAlign: TextAlign.center,
+              ),
+              /*
               _buildAnimatedText(
                   '대학교 어느 수업\n프로젝트에서 한팀이 되어 처음 만났습니다.\n 이제는 한 가정으로써\n 프로젝트를 다시 시작하려고 합니다.',
-                  3),
+                  3),*/
               /*
               const Text(
                 '겨울의 따뜻한 햇살 아래\n 저희 두 사람이 소중한 분들을 모시고\n 사랑으로 하나되어\n 한길을 걸어가고자 합니다.',
@@ -230,8 +246,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               const SizedBox(
                 height: 30,
               ),
+              const Text(
+                '프로젝트가 성공적으로 오픈할 수 있도록\n참석하여 지혜와 용기를\n저희에게 나누어주십시오.',
+                textAlign: TextAlign.center,
+              ),
+/*
               _buildAnimatedText(
                   '프로젝트가 성공적으로 오픈할 수 있도록\n 참석하여 지혜와 용기를\n 저희에게 나누어주십시오.', 4),
+                  */
               /*
               const Text(
                 '한곳을 바라보며 첫발을 내딛는 자리\n 그 시작에 함께해 주시면\n 더없는 기쁨으로 간직하겠습니다.',
@@ -240,10 +262,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 //style: TextStyle(color: Color(0xff1877F2), fontSize: 19),
               ),
               */
-              const SizedBox(
-                height: 30,
-              ),
 
+              SizedBox(
+                width: 512,
+                height: 300,
+                child: Image.network(
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/19_nlkfdx.jpg',
+                  // height: 500,
+                ),
+              ),
+              /*
               AnimatedOpacity(
                 opacity: _opacity,
                 duration: const Duration(milliseconds: 2000),
@@ -256,6 +284,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ),
               ),
+              */
               const SizedBox(
                 height: 20,
               ),
