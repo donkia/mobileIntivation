@@ -4,6 +4,7 @@ import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/bottom.dart';
 import 'package:mobile_invitation/widget/gallery.dart';
 import 'package:mobile_invitation/widget/naverMap.dart';
+import 'package:mobile_invitation/widget/notice.dart';
 import 'package:mobile_invitation/widget/openMapApp.dart';
 import 'package:mobile_invitation/widget/share.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -343,11 +344,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 '1월',
                 style: TextStyle(fontWeight: FontWeight.w700),
               ),
-
+/*
               Image.asset(
                 'assets/images/calendar.png',
                 //height: 30,
               ),
+              */
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -457,6 +459,22 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
               // 지도 어플리케이션 연동
               const OpenMapApp(),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                '[안내사항]',
+                textAlign: TextAlign.left,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Divider(
+                  thickness: 1,
+                  color: Colors.grey,
+                ),
+              ),
+              const Notice(),
               const SizedBox(
                 height: 30,
               ),

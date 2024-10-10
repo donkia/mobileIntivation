@@ -65,56 +65,124 @@ class OpenMapApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          IconButton(
-            onPressed: () {
-              _launchNaverMap();
-            },
-            icon: //const Text('네이버지도'),
-                Image.asset(
-              'assets/images/naverMap.png',
-              height: 30,
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Column(
+        children: [
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            IconButton(
+              onPressed: () {
+                _launchNaverMap();
+              },
+              icon: //const Text('네이버지도'),
+                  Image.network(
+                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594320/naverMap_khshgm.png',
+                // height: 500,
+                height: 30,
+              ),
             ),
-          ),
-          IconButton(
-            onPressed: () {
-              _launchKakaoMap();
-            },
-            icon: //const Text('카카오지도'),
-                Image.asset(
-              'assets/images/kakaoMap.png',
-              height: 30,
-              // height: 500,
+            IconButton(
+              onPressed: () {
+                _launchKakaoMap();
+              },
+              icon: //const Text('카카오지도'),
+                  Image.network(
+                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594321/kakaoMap_bdq4bu.png',
+                height: 30,
+                // height: 500,
+              ),
             ),
-          ),
-          IconButton(
-            onPressed: () {
-              _launchTMap();
-            },
-            icon: //const Text('티맵'),
-                Image.asset(
-              'assets/images/tMap.png',
-              height: 30,
-              // height: 500,
+            IconButton(
+              onPressed: () {
+                _launchTMap();
+              },
+              icon: //const Text('티맵'),
+                  Image.network(
+                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594321/tMap_bhmtuy.png',
+                height: 30,
+                // height: 500,
+              ),
             ),
+          ]),
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start, //왼쪽 정렬 설정
+
+            children: [
+              Text(
+                '지하철',
+                textAlign: TextAlign.start,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: '- '),
+                    TextSpan(
+                      text: '2호선',
+                      style: TextStyle(
+                        color: Colors.green, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '5호선',
+                      style: TextStyle(
+                        color: Colors.purple, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '중앙선',
+                      style: TextStyle(
+                        color: Colors.blueAccent, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '분당선',
+                      style: TextStyle(
+                        color: Colors.yellow, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ' : 왕십리역 9번 출구(도보 3분거리) '),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: '- '),
+                    TextSpan(
+                      text: '5호선',
+                      style: TextStyle(
+                        color: Colors.purple, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ' : 행당역 3번 출구(도보 3분거리 직진) '),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                '버스',
+                textAlign: TextAlign.start,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              Text('- 지선(초록) : 2016, 4211'),
+              Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
+              Text('- 마을버스 : 02, 03, 08'),
+              Text('- 공항버스 : 6010(인천)'),
+            ],
           ),
-        ]), /*
-        const Column(
-          children: [
-            Text('지하철/버스'),
-            Text('2호선, 5호선, 중앙선, 분당선 - 왕십리역 9번출구(도보 3분거리)'),
-            Text('5호선 - 행당역 3번 출구(도보 3분거리 직진)'),
-          ],
-        ),
-        const Column(
-          children: [
-            Text('주차'),
-            Text('무학여고 주차장'),
-          ],
-        )*/
-      ],
+          const SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
 }
