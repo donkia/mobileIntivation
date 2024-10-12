@@ -94,6 +94,34 @@ class Notice extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
+          // const Text(
+          //   '04',
+          //   style: TextStyle(
+          //     fontSize: 15,
+          //     fontWeight: FontWeight.w700,
+          //     //decoration: TextDecoration.underline
+          //   ),
+          //   //textAlign: TextAlign.start,
+          // ),
+          // const Text('- 참석 의사 전달은 신랑,신부에게 큰 도움이 됩니다.'),
+          // const SizedBox(
+          //   height: 20,
+          // ),
+          // Center(
+          //   child: OutlinedButton(
+          //     onPressed: () {},
+          //     style: OutlinedButton.styleFrom(
+          //         side: const BorderSide(
+          //           color: Colors.black,
+          //           width: 1.0,
+          //         ),
+          //         backgroundColor: Colors.transparent),
+          //     child: const Text(
+          //       '참석 의사 전달하기',
+          //       style: TextStyle(color: Colors.black),
+          //     ),
+          //   ),
+          // ),
           const Text(
             '04',
             style: TextStyle(
@@ -103,7 +131,7 @@ class Notice extends StatelessWidget {
             ),
             //textAlign: TextAlign.start,
           ),
-          const Text('- 참석 의사 전달은 신랑,신부에게 큰 도움이 됩니다.'),
+          const Text('- 신랑, 신부에게 축하의 인사를 남겨주세요!'),
           const SizedBox(
             height: 20,
           ),
@@ -117,7 +145,7 @@ class Notice extends StatelessWidget {
                   ),
                   backgroundColor: Colors.transparent),
               child: const Text(
-                '참석 의사 전달하기',
+                '축하의 인사 남기기',
                 style: TextStyle(color: Colors.black),
               ),
             ),

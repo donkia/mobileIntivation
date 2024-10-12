@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/bottom.dart';
+import 'package:mobile_invitation/widget/customCalendar.dart';
 import 'package:mobile_invitation/widget/gallery.dart';
 import 'package:mobile_invitation/widget/naverMap.dart';
 import 'package:mobile_invitation/widget/notice.dart';
@@ -340,16 +341,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 10,
               ),
 
-              const Text(
-                '1월',
-                style: TextStyle(fontWeight: FontWeight.w700),
+              // const Text(
+              //   '1월',
+              //   style: TextStyle(fontWeight: FontWeight.w700),
+              // ),
+              const CustomCalendar(),
+              const SizedBox(
+                height: 15,
               ),
-/*
-              Image.asset(
-                'assets/images/calendar.png',
-                //height: 30,
-              ),
-              */
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
