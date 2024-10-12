@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_invitation/widget/guestBook.dart';
 
 class Notice extends StatelessWidget {
   const Notice({super.key});
@@ -137,7 +138,12 @@ class Notice extends StatelessWidget {
           ),
           Center(
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GuestBook()),
+                );
+              },
               style: OutlinedButton.styleFrom(
                   side: const BorderSide(
                     color: Colors.black,
