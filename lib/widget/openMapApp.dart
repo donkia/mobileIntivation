@@ -168,14 +168,23 @@ class OpenMapApp extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                '버스',
-                textAlign: TextAlign.start,
-                style: TextStyle(fontWeight: FontWeight.w700),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: '버스',
+                      style: TextStyle(
+                          //color: Colors.purple, // 원하는 색상
+                          fontWeight: FontWeight.w700),
+                    ),
+                    TextSpan(text: ' : 무학여고 하차'),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
               ),
               Text('- 지선(초록) : 2016, 4211'),
               Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
-              Text('- 마을버스 : 02, 03, 08'),
+              Text('- 마을버스 : 성동02, 성동08'),
               Text('- 공항버스 : 6010(인천)'),
             ],
           ),
