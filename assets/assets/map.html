@@ -11,10 +11,6 @@
         height: 100%;
         margin: 0;
         padding: 0;
-        pointer-events: none; /* 모든 포인터 이벤트 비활성화 */
-      }
-      #map {
-        pointer-events: auto; /* 지도에서 포인터 이벤트 활성화 */
       }
     </style>
   </head>
@@ -22,20 +18,14 @@
     <div id="map"></div>
     <script>
       var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.5582510, 127.0344189), // 서울시청 좌표
-        zoom: 15,
-      // disableDoubleTapZoom: true, // 더블탭으로 줌 비활성화
-        //disableZoomControl: true, // 줌 컨트롤 비활성화
-        scrollWheel: false, // 스크롤 휠로 줌 비활성화
-       // keyboardShortcuts: true // 키보드로 줌 비활성화
+        center: new naver.maps.LatLng(37.5582510, 127.0344189), // 레노스블랑쉬 좌표
+        zoom: 16
       });
 
       var marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(37.5582510, 127.0344189),
         map: map
       });
-  
-      
     </script>
   </body>
 </html>
