@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class GuestBook extends StatefulWidget {
-  const GuestBook({super.key});
+  final VoidCallback onSubmitted;
+
+  const GuestBook({super.key, required this.onSubmitted});
 
   @override
   _GuestBookState createState() => _GuestBookState();
@@ -12,10 +14,7 @@ class _GuestBookState extends State<GuestBook> {
   final _nameController = TextEditingController();
   final _messageController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
-  // Firestore 컬렉션 참조
-  CollectionReference guestbook =
-      FirebaseFirestore.instance.collection('guestbook');
+  String? _selectedRole;
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
@@ -25,29 +24,28 @@ class _GuestBookState extends State<GuestBook> {
         "name": _nameController.text,
         "message": _messageController.text,
         "timestamp": FieldValue.serverTimestamp(),
-        "type": '1'
+        "type": _selectedRole
       });
 
-      // await guestbook.doc('AV9LVH2LQ4QXhdcDdcz3').set({
-      //   'name': _nameController.text,
-      //   'message': _messageController.text,
-      //   'timestamp': FieldValue.serverTimestamp(),
-      //   'type': '1'
-      // });
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('메시지가 제출되었습니다!')),
       );
       _nameController.clear();
       _messageController.clear();
+      setState(() {
+        _selectedRole = null;
+      });
+
+      widget.onSubmitted(); // 폼 제출 후 부모 위젯에서 스택을 닫도록 호출
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('방명록')),
+      appBar: AppBar(title: const Text('축하인사 전하기')),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(10.0),
         child: Form(
           key: _formKey,
           child: Column(
@@ -55,7 +53,7 @@ class _GuestBookState extends State<GuestBook> {
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: const InputDecoration(labelText: '이름'),
+                decoration: const InputDecoration(labelText: '작성자 이름'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return '이름을 입력해주세요';
@@ -63,10 +61,35 @@ class _GuestBookState extends State<GuestBook> {
                   return null;
                 },
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 10),
+              DropdownButtonFormField<String>(
+                decoration: const InputDecoration(labelText: '축하인사 대상자'),
+                value: _selectedRole,
+                items: ['신랑', '신부'].map((role) {
+                  return DropdownMenuItem(value: role, child: Text(role));
+                }).toList(),
+                onChanged: (value) {
+                  setState(() {
+                    _selectedRole = value;
+                  });
+                },
+                validator: (value) {
+                  if (value == null) {
+                    return '축하인사 대상자를 선택해주세요.';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 10),
               TextFormField(
                 controller: _messageController,
-                decoration: const InputDecoration(labelText: '메시지'),
+                decoration: const InputDecoration(
+                  labelText: '인사말을 남겨주세요!',
+                  border: OutlineInputBorder(),
+                ),
+                maxLines: 3,
+                minLines: 2,
+                style: const TextStyle(fontSize: 10),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return '메시지를 입력해주세요';
@@ -74,7 +97,7 @@ class _GuestBookState extends State<GuestBook> {
                   return null;
                 },
               ),
-              const SizedBox(height: 32),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: _submitForm,
                 child: const Text('제출'),

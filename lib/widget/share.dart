@@ -17,11 +17,11 @@ class Share extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text('항상 저희를 지켜봐주시고 지원해주신 부모님과 가족,'),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text('그리고 응원과 축하의 마음을 전해주신 모든 분들께'),
+          // const Text('항상 저희를 지켜봐주시고 지원해주신 부모님과 가족,'),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          const Text('응원과 축하의 마음을 전해주신 모든 분들께'),
           const SizedBox(
             height: 10,
           ),
@@ -29,7 +29,7 @@ class Share extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const Text('항상 건강하시고 행복하세요.'),
+          const Text('항상 건강하시고 행복하시길 기원드립니다.'),
           const SizedBox(
             height: 10,
           ),

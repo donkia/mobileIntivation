@@ -422,35 +422,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         Icons.copy,
                         size: 10,
                       )),
-                  /*
-                  const Text(
-                    '주소 복사하기',
-                    style: TextStyle(fontSize: 9),
-                  )
-                  */
                 ],
               ),
 
-              /*
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Clipboard.setData(
-                            const ClipboardData(text: '서울특별시 성동구 행당동 319-36'));
-                      },
-                      icon: const Icon(
-                        Icons.copy,
-                        size: 10,
-                      )),
-                  const Text(
-                    '주소 복사하기',
-                    style: TextStyle(fontSize: 9),
-                  )
-                ],
-              ),
-              */
               // 네이버 지도
               const SizedBox(
                 height: 400,
@@ -495,39 +469,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
               const Account(),
 
-/*
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.asset('assets/images/18.jpg'),
-                  const Positioned(
-                    top: 5,
-                    //width: 100,
-                    //height: 100,
-                    //child: Image.asset('assets/images/4.jpg'),
-                    child: Text(
-                      '저희의 새로운 시작을\n축하해 주시는 모든 분들께\n진심으로 감사드립니다.\n행복하게 잘 살겠습니다.',
-                      maxLines: 5,
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.w700),
-                      //style: TextStyle(color: Color(0xff1877F2), fontSize: 19),
-                    ),
-                  ),
-                ],
-              ),
-*/
               const SizedBox(
                 height: 10,
               ),
               const Share(),
               const Buttom()
-              //const Text('공유하기'),
-              // const SizedBox(
-              //   //height: 400,
-              //   child: Share(),
-              // ),
             ],
           ),
         ),

@@ -66,6 +66,8 @@ class OpenMapApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch, // 부모 위젯의 전체 너비 사용
+
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           IconButton(
@@ -102,78 +104,81 @@ class OpenMapApp extends StatelessWidget {
             ),
           ),
         ]),
-        const Column(
-          crossAxisAlignment: CrossAxisAlignment.start, //왼쪽 정렬 설정
+        const Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, //왼쪽 정렬 설정
 
-          children: [
-            Text(
-              '지하철',
-              textAlign: TextAlign.start,
-              style: TextStyle(fontWeight: FontWeight.w700),
-            ),
-            Text.rich(
-              TextSpan(
-                children: [
-                  TextSpan(text: '- '),
-                  TextSpan(
-                    text: '2호선',
-                    style: TextStyle(
-                      color: Colors.green, // 원하는 색상
-                    ),
-                  ),
-                  TextSpan(text: ', '),
-                  TextSpan(
-                    text: '5호선',
-                    style: TextStyle(
-                      color: Colors.purple, // 원하는 색상
-                    ),
-                  ),
-                  TextSpan(text: ', '),
-                  TextSpan(
-                    text: '중앙선',
-                    style: TextStyle(
-                      color: Color(0xFF76B69B), // 원하는 색상
-                    ),
-                  ),
-                  TextSpan(text: ', '),
-                  TextSpan(
-                    text: '분당선',
-                    style: TextStyle(color: Color(0xFFDBA829) // 원하는 색상
-                        ),
-                  ),
-                  TextSpan(text: '\n    : 왕십리역 9번 출구(도보 3분거리) '),
-                  //TextSpan(text: ' 입니다.'),
-                ],
+            children: [
+              Text(
+                '지하철',
+                // textAlign: TextAlign.start,
+                style: TextStyle(fontWeight: FontWeight.w700),
               ),
-            ),
-            Text.rich(
-              TextSpan(
-                children: [
-                  TextSpan(text: '- '),
-                  TextSpan(
-                    text: '5호선',
-                    style: TextStyle(
-                      color: Colors.purple, // 원하는 색상
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: '- '),
+                    TextSpan(
+                      text: '2호선',
+                      style: TextStyle(
+                        color: Colors.green, // 원하는 색상
+                      ),
                     ),
-                  ),
-                  TextSpan(text: ' : 행당역 3번 출구(도보 3분거리 직진) '),
-                  //TextSpan(text: ' 입니다.'),
-                ],
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '5호선',
+                      style: TextStyle(
+                        color: Colors.purple, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '중앙선',
+                      style: TextStyle(
+                        color: Color(0xFF76B69B), // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ', '),
+                    TextSpan(
+                      text: '분당선',
+                      style: TextStyle(color: Color(0xFFDBA829) // 원하는 색상
+                          ),
+                    ),
+                    TextSpan(text: ' : 왕십리역 9번 출구(도보 3분거리) '),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              '버스',
-              textAlign: TextAlign.start,
-              style: TextStyle(fontWeight: FontWeight.w700),
-            ),
-            Text('- 지선(초록) : 2016, 4211'),
-            Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
-            Text('- 마을버스 : 02, 03, 08'),
-            Text('- 공항버스 : 6010(인천)'),
-          ],
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: '- '),
+                    TextSpan(
+                      text: '5호선',
+                      style: TextStyle(
+                        color: Colors.purple, // 원하는 색상
+                      ),
+                    ),
+                    TextSpan(text: ' : 행당역 3번 출구(도보 3분거리 직진) '),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                '버스',
+                textAlign: TextAlign.start,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+              Text('- 지선(초록) : 2016, 4211'),
+              Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
+              Text('- 마을버스 : 02, 03, 08'),
+              Text('- 공항버스 : 6010(인천)'),
+            ],
+          ),
         ),
         const SizedBox(
           height: 10,

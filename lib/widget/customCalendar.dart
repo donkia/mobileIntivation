@@ -21,6 +21,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
           // 아무 작업도 하지 않음
         },
         child: TableCalendar(
+          availableGestures: AvailableGestures.none,
           firstDay: DateTime.utc(2025, 1, 1),
           lastDay: DateTime.utc(2025, 1, 31),
           focusedDay: focusedDay,
@@ -42,6 +43,9 @@ class _CustomCalendarState extends State<CustomCalendar> {
             formatButtonVisible: false,
             leftChevronVisible: false,
             rightChevronVisible: false,
+            // titleTextFormatter: (date, locale) {
+            //   return '${DateFormat('MM').format(date)}월';
+            // },
 
             // titleTextStyle는 사용하지 않고 customHeaderBuilder를 사용
           ),
