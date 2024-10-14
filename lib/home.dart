@@ -80,7 +80,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   void _loadImages() async {
     // 이미지 로드 시뮬레이션
-    await Future.delayed(const Duration(seconds: 3)); // 이미지 로드를 기다림
+    await Future.delayed(const Duration(seconds: 2)); // 이미지 로드를 기다림
     setState(() {
       _isLoading = false; // 로딩 완료
     });
