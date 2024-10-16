@@ -29,7 +29,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   double _scrollPosition = 0.0;
   late ScrollController _scrollController;
 
-  bool _isLoading = true; // 로딩 상태를 추적하는 변수
+  bool _isLoading = false; // 로딩 상태를 추적하는 변수
 
   int getDday() {
     DateTime today = DateTime.now();
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     //_controller.forward(); // 애니메이션 시작
 
     // 이미지 로드 후 로딩 상태 변경
-    _loadImages();
+    // _loadImages();
   }
 
   @override
