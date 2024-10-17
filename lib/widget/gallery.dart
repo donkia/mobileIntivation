@@ -48,7 +48,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'assets/images/15.jpg',
     'assets/images/6.jpg',
   ];
-  */
+  
   final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/3_kfb4po.jpg',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/16_btbnfa.jpg',
@@ -65,6 +65,26 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477076/4_ehjbii.jpg',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/15_s7h5a7.jpg',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/6_ekbxbh.jpg',
+  ];*/
+  final List<String> imagePaths = [
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201842/12_wduffi.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/10_tpzfhi.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/9_gnqnse.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/1_o0jzqi.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/11_e0mpel.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/14_igvqrv.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/13_w1ts1z.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/15_swxou3.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/4_tyi5zq.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/7_tlrlic.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/16_lhojdj.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/5_nm4igx.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/17_keq3um.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/18_opv375.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/6_mr4yev.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/8_jgzior.webp',
   ];
 
   @override

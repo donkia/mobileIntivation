@@ -76,7 +76,7 @@ class OpenMapApp extends StatelessWidget {
             },
             icon: //const Text('네이버지도'),
                 Image.network(
-              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594320/naverMap_khshgm.png',
+              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201836/naverMap_q8fiud.webp',
               // height: 500,
               height: 30,
             ),
@@ -87,7 +87,7 @@ class OpenMapApp extends StatelessWidget {
             },
             icon: //const Text('카카오지도'),
                 Image.network(
-              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594321/kakaoMap_bdq4bu.png',
+              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201836/kakaoMap_djfsrm.webp',
               height: 30,
               // height: 500,
             ),
@@ -98,7 +98,7 @@ class OpenMapApp extends StatelessWidget {
             },
             icon: //const Text('티맵'),
                 Image.network(
-              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728594321/tMap_bhmtuy.png',
+              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201836/tMap_mlmeos.webp',
               height: 30,
               // height: 500,
             ),
