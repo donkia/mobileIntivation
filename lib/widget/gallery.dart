@@ -104,21 +104,23 @@ class _ImageGridScreenState extends State<ImageGridScreen>
                 mainAxisExtent: 150.0),
             itemCount: imagePaths.length,
             itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index; // 선택된 인덱스를 저장
-                  });
-                },
-                child: Card(
-                  color: Colors.white,
-                  child: CachedNetworkImage(
-                    imageUrl: imagePaths[index],
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) =>
-                        const Center(child: CircularProgressIndicator()),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
+              return RepaintBoundary(
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index; // 선택된 인덱스를 저장
+                    });
+                  },
+                  child: Card(
+                    color: Colors.white,
+                    child: CachedNetworkImage(
+                      imageUrl: imagePaths[index],
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) =>
+                          const Center(child: CircularProgressIndicator()),
+                      errorWidget: (context, url, error) =>
+                          const Icon(Icons.error),
+                    ),
                   ),
                 ),
               );
