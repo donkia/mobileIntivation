@@ -46,7 +46,14 @@ class FirebaseInit extends StatelessWidget {
         // 초기화 중일 때 로딩 화면 표시
         return const Scaffold(
           body: Center(
-            child: CircularProgressIndicator(), // 로딩 애니메이션
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 20), // 간격
+                Text('초대장을 준비 중입니다.방문해주셔서 감사드립니다!'),
+              ],
+            ), // 로딩 애니메이션
           ),
         );
       },

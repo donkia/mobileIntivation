@@ -9,8 +9,8 @@ import 'package:mobile_invitation/widget/naverMap.dart';
 import 'package:mobile_invitation/widget/notice.dart';
 import 'package:mobile_invitation/widget/openMapApp.dart';
 import 'package:mobile_invitation/widget/share.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:url_launcher/url_launcher.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -156,18 +156,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   '2025년 1월 18일 토요일 오전 12시',
                   //style: TextStyle(fontWeight: FontWeight.w700),
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.notoSerif(),
+                  //style: GoogleFonts.notoSerif(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   '레노스블랑쉬웨딩홀 블랑쉬홀',
-                  style: GoogleFonts.notoSerif(),
+                  //style: GoogleFonts.notoSerif(),
                   //style: TextStyle(fontWeight: FontWeight.w700),
                   textAlign: TextAlign.center,
                 ),
@@ -374,13 +374,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 //사진 갤러리 보여주기
-                Container(
-                  //  color: Colors.white,
-                  child: const SizedBox(
-                    height: 750,
-                    child: Gallery(),
-                  ),
-                ),
+                const SizedBox(height: 750, child: Gallery()),
 
                 const SizedBox(
                   height: 80,
