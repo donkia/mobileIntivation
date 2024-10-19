@@ -30,7 +30,6 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   @override
   bool get wantKeepAlive => true;
   int? selectedIndex;
-  int _imagesToShow = 9;
 /*
   final List<String> imagePaths = [
     'assets/images/3.jpg',
@@ -88,61 +87,43 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/8_jgzior.webp',
   ];
 
-  void _loadMoreImages() {
-    setState(() {
-      // 더보기 버튼을 클릭할 때마다 9개씩 더 로드
-      _imagesToShow = (_imagesToShow + 9 <= imagePaths.length)
-          ? _imagesToShow + 9
-          : imagePaths.length;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     super.build(context);
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
+      body: Stack(
         children: [
           // GridView를 백그라운드에 배치
-          Expanded(
-            child: GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 1.0,
-                  mainAxisExtent: 150.0),
-              itemCount: _imagesToShow,
-              itemBuilder: (context, index) {
-                return RepaintBoundary(
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedIndex = index; // 선택된 인덱스를 저장
-                      });
-                    },
-                    child: Card(
-                      color: Colors.white,
-                      child: CachedNetworkImage(
-                        imageUrl: imagePaths[index],
-                        fit: BoxFit.cover,
-                        placeholder: (context, url) =>
-                            const Center(child: CircularProgressIndicator()),
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error),
-                      ),
-                    ),
+          GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 1.0,
+                mainAxisExtent: 150.0),
+            itemCount: imagePaths.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedIndex = index; // 선택된 인덱스를 저장
+                  });
+                },
+                child: Card(
+                  color: Colors.white,
+                  child: CachedNetworkImage(
+                    imageUrl: imagePaths[index],
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        const Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
                   ),
-                );
-              },
-            ),
-          ), // 더보기 버튼을 추가
-          if (_imagesToShow < imagePaths.length)
-            ElevatedButton(
-              onPressed: _loadMoreImages,
-              child: const Text('더보기'),
-            ),
+                ),
+              );
+            },
+          ),
           // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
           if (selectedIndex != null) ...[
             // 백그라운드 블러 처리 (선택적으로)
