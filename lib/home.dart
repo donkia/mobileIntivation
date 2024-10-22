@@ -87,43 +87,43 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     });
   }
 
-  Widget _buildAnimatedText(String text, int index) {
-    // 스크롤에 따라 애니메이션이 적용되도록 조정
-    double start = index * 250.0;
-    double end = start + 250.0;
+  // Widget _buildAnimatedText(String text, int index) {
+  //   // 스크롤에 따라 애니메이션이 적용되도록 조정
+  //   double start = index * 250.0;
+  //   double end = start + 250.0;
 
-    double animateValue =
-        (_scrollPosition - start / end - start).clamp(0.0, 1.0);
-    return Opacity(
-      opacity: animateValue,
-      child: Transform.translate(
-        offset: Offset(0, 50 * (1 - animateValue)),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-  }
+  //   double animateValue =
+  //       (_scrollPosition - start / end - start).clamp(0.0, 1.0);
+  //   return Opacity(
+  //     opacity: animateValue,
+  //     child: Transform.translate(
+  //       offset: Offset(0, 50 * (1 - animateValue)),
+  //       child: Text(
+  //         text,
+  //         textAlign: TextAlign.center,
+  //       ),
+  //     ),
+  //   );
+  // }
 
-  Widget _buildAnimatedBoldText(String text, int index) {
-    // 스크롤에 따라 애니메이션이 적용되도록 조정
-    double start = index * 250.0;
-    double end = start + 250.0;
+  // Widget _buildAnimatedBoldText(String text, int index) {
+  //   // 스크롤에 따라 애니메이션이 적용되도록 조정
+  //   double start = index * 250.0;
+  //   double end = start + 250.0;
 
-    double animateValue =
-        (_scrollPosition - start / end - start).clamp(0.0, 1.0);
-    return Opacity(
-      opacity: animateValue,
-      child: Transform.translate(
-        offset: Offset(0, 50 * (1 - animateValue)),
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-        ),
-      ),
-    );
-  }
+  //   double animateValue =
+  //       (_scrollPosition - start / end - start).clamp(0.0, 1.0);
+  //   return Opacity(
+  //     opacity: animateValue,
+  //     child: Transform.translate(
+  //       offset: Offset(0, 50 * (1 - animateValue)),
+  //       child: Text(
+  //         text,
+  //         textAlign: TextAlign.center,
+  //       ),
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -138,10 +138,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 10,
                 ),
                 SizedBox(
-                  width: 512,
-                  height: 512,
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.width,
                   child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/3_kfb4po.jpg',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
                     // height: 500,
                   ),
                 ),
@@ -205,10 +205,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 20,
                 ),
                 SizedBox(
-                  width: 512,
-                  height: 512,
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.width,
                   child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/2_dbpjqj.jpg',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
                     // height: 500,
                   ),
                 ),
@@ -266,10 +266,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               */
 
                 SizedBox(
-                  width: 512,
-                  height: 300,
+                  width: MediaQuery.of(context).size.width * 1,
+                  height: MediaQuery.of(context).size.width,
                   child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/19_nlkfdx.jpg',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729604156/19_ylelfa.webp',
                     // height: 500,
                   ),
                 ),
