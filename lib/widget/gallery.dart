@@ -99,6 +99,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
         children: [
           // GridView를 백그라운드에 배치
           GridView.builder(
+            cacheExtent: 5000,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
