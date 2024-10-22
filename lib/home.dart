@@ -20,11 +20,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
-  final double _opacity = 0.0;
-  final double _scale = 1.0;
+  //final double _opacity = 0.0;
+  //final double _scale = 1.0;
 
-  late AnimationController _controller;
-  late List<Animation<double>> _animations;
+  //late AnimationController _controller;
+  //late List<Animation<double>> _animations;
   final int _totalText = 5; // 애니메이션 총 텍스트 개수
   double _scrollPosition = 0.0;
   late ScrollController _scrollController;
@@ -74,8 +74,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void dispose() {
     // TODO: implement dispose
-    _controller.dispose();
-    _scrollController.dispose();
+    //_controller.dispose();
+    //  _scrollController.dispose();
     super.dispose();
   }
 
