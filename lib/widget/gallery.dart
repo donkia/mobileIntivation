@@ -30,7 +30,6 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   @override
   bool get wantKeepAlive => true;
   int? selectedIndex;
-  bool showAllImages = false;
 /*
   final List<String> imagePaths = [
     'assets/images/3.jpg',
@@ -92,21 +91,19 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   Widget build(BuildContext context) {
     // TODO: implement build
     super.build(context);
-    final List<String> displayedImages =
-        showAllImages ? imagePaths : imagePaths.sublist(0, 6);
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children: [
           // GridView를 백그라운드에 배치
           GridView.builder(
-            //       cacheExtent: 5000,
-            //     physics: const NeverScrollableScrollPhysics(),
+            cacheExtent: 5000,
+            physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 crossAxisSpacing: 1.0,
                 mainAxisExtent: 150.0),
-            itemCount: displayedImages.length,
+            itemCount: imagePaths.length,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
@@ -117,10 +114,10 @@ class _ImageGridScreenState extends State<ImageGridScreen>
                 child: Card(
                   color: Colors.white,
                   child: CachedNetworkImage(
-                    imageUrl: displayedImages[index],
+                    imageUrl: imagePaths[index],
                     fit: BoxFit.cover,
-                    //  placeholder: (context, url) =>
-                    //      const Center(child: CircularProgressIndicator()),
+                    placeholder: (context, url) =>
+                        const Center(child: CircularProgressIndicator()),
                     errorWidget: (context, url, error) =>
                         const Icon(Icons.error),
                   ),
@@ -128,22 +125,6 @@ class _ImageGridScreenState extends State<ImageGridScreen>
               );
             },
           ),
-
-          if (!showAllImages)
-            Positioned(
-              bottom: 20,
-              left: 0,
-              right: 0,
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    showAllImages = true;
-                  });
-                },
-                child: const Text("더보기"),
-              ),
-            ),
-
           // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
           if (selectedIndex != null) ...[
             // 백그라운드 블러 처리 (선택적으로)
