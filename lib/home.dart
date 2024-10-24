@@ -157,9 +157,21 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 SizedBox(
                   //  width: 512,
                   //height: 512,
-                  child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-                    // height: 500,
+                  child: Stack(
+                    children: [
+                      Image.network(
+                        //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
+                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                        // height: 500,
+                      ),
+                      Positioned.fill(
+                          child: Image.network(
+                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
+                        fit: BoxFit.cover,
+                        // height: 500,
+                      ))
+                    ],
+                    //child:
                   ),
                 ),
                 const SizedBox(
@@ -225,7 +237,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   //width: MediaQuery.of(context).size.width * 1,
                   //height: MediaQuery.of(context).size.width,
                   child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
                     // height: 500,
                   ),
                 ),
