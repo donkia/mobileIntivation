@@ -10,7 +10,7 @@ import 'package:mobile_invitation/widget/notice.dart';
 import 'package:mobile_invitation/widget/openMapApp.dart';
 import 'package:mobile_invitation/widget/share.dart';
 //import 'package:url_launcher/url_launcher.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -135,11 +135,28 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 10,
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text('김병현',
+                        style: GoogleFonts.gowunDodum(
+                            textStyle: const TextStyle(fontSize: 24))),
+                    Text('01/18',
+                        style: GoogleFonts.gowunDodum(
+                            textStyle: const TextStyle(fontSize: 24))),
+                    Text('유슬기',
+                        style: GoogleFonts.gowunDodum(
+                            textStyle: const TextStyle(fontSize: 24)))
+                  ],
+                ),
+                const SizedBox(
+                  height: 40,
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 1,
-                  height: MediaQuery.of(context).size.width,
+                  //  width: 512,
+                  //height: 512,
                   child: Image.network(
                     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
                     // height: 500,
@@ -148,11 +165,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  '김병현 | 유슬기',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 30),
-                ),
+                // const Text(
+                //   '김병현 | 유슬기',
+                //   textAlign: TextAlign.center,
+                //   style: TextStyle(fontSize: 30),
+                // ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -205,8 +222,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 20,
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 1,
-                  height: MediaQuery.of(context).size.width,
+                  //width: MediaQuery.of(context).size.width * 1,
+                  //height: MediaQuery.of(context).size.width,
                   child: Image.network(
                     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
                     // height: 500,
