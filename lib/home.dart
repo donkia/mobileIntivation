@@ -294,7 +294,40 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 //style: TextStyle(color: Color(0xff1877F2), fontSize: 19),
               ),
               */
-
+                const SizedBox(
+                  height: 50,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '김상동﹒최계봉',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    Text('의 아들'),
+                    Text(
+                      '   병현',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '유성일﹒조선옥',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    Text('의   딸  '),
+                    Text(
+                      '   슬기',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 1,
                   height: MediaQuery.of(context).size.width,
@@ -320,38 +353,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '김상동﹒최계봉',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    ),
-                    Text('의 아들'),
-                    Text(
-                      '   병현',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    )
-                  ],
-                ),
 
-                const SizedBox(
-                  height: 10,
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '유성일﹒조선옥',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    ),
-                    Text('의   딸  '),
-                    Text(
-                      '   슬기',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    )
-                  ],
-                ),
                 const SizedBox(
                   height: 80,
                 ),
