@@ -32,41 +32,6 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   int? selectedIndex;
 /*
   final List<String> imagePaths = [
-    'assets/images/3.jpg',
-    'assets/images/16.jpg',
-    'assets/images/7.jpg',
-    'assets/images/5.jpg',
-    'assets/images/8.jpg',
-    'assets/images/9.jpg',
-    'assets/images/10.jpg',
-    'assets/images/11.jpg',
-    'assets/images/12.jpg',
-    'assets/images/13.jpg',
-    'assets/images/14.jpg',
-    'assets/images/17.jpg',
-    'assets/images/4.jpg',
-    'assets/images/15.jpg',
-    'assets/images/6.jpg',
-  ];
-  
-  final List<String> imagePaths = [
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/3_kfb4po.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/16_btbnfa.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477076/7_g1paj8.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477076/5_kjwvwv.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/8_nw4exw.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477078/9_rhbgx1.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477078/10_ywfdel.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477078/11_gzea2d.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477078/12_pbzmy0.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477079/13_kv3puh.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477078/14_z3zbai.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477076/17_qmpmc2.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477076/4_ehjbii.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/15_s7h5a7.jpg',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/6_ekbxbh.jpg',
-  ];*/
-  final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201842/12_wduffi.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/10_tpzfhi.webp',
@@ -86,25 +51,32 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/6_mr4yev.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/8_jgzior.webp',
   ];
-  /*
+  */
+
   final List<String> imagePaths = [
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
+    //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904920/12_xbchus.webp',
+    // 'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/15_cfvdzp.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904921/14_mdlxp4.webp',
+
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904921/13_xdpqhy.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904916/6_ecpcdh.webp',
+
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904920/11_xafjdi.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904923/17_bgkb8o.webp',
+
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904918/10_nlzvg3.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/9_wvg2p6.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/5_hwlrbj.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/8_ct5s9w.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/7_dkll7w.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/2_lonjtg.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/4_rddsve.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/3_fmslex.webp',
+    // 'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
   ];
-*/
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

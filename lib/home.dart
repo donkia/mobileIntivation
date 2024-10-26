@@ -134,61 +134,58 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             // controller: _scrollController,
             child: Column(
               children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('김병현',
-                        style: GoogleFonts.notoSerif(
-                            textStyle: const TextStyle(fontSize: 24))),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "01",
-                          style: GoogleFonts.notoSerif(
-                              textStyle: const TextStyle(fontSize: 24),
-                              letterSpacing: 1.5,
-                              fontSize: 24),
-                          textAlign: TextAlign.center,
-                        ),
-                        Transform.rotate(
-                          angle: 0, //-0.7854, // -45 degrees in radians
-                          // child: const Divider(
-                          //   thickness: 20,
-                          //   color: Colors.black,
-                          //   indent: 20, // 적절히 조정
-                          //   endIndent: 20, // 적절히 조정
-                          // ),
-                          child: Text(
-                            "/",
-                            style: GoogleFonts.notoSerif(
-                                textStyle: const TextStyle(fontSize: 40),
-                                //  letterSpacing: 1.5,
-                                fontSize: 24),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Text(
-                          "18",
-                          style: GoogleFonts.notoSerif(
-                              textStyle: const TextStyle(fontSize: 24),
-                              letterSpacing: 1.5,
-                              fontSize: 24),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ),
-                    Text('유슬기',
-                        style: GoogleFonts.notoSerif(
-                            textStyle: const TextStyle(fontSize: 24)))
-                  ],
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     Text('김병현',
+                //         style: GoogleFonts.notoSerif(
+                //             textStyle: const TextStyle(fontSize: 24))),
+                //     Column(
+                //       mainAxisAlignment: MainAxisAlignment.center,
+                //       children: [
+                //         Text(
+                //           "01",
+                //           style: GoogleFonts.notoSerif(
+                //               textStyle: const TextStyle(fontSize: 24),
+                //               letterSpacing: 1.5,
+                //               fontSize: 24),
+                //           textAlign: TextAlign.center,
+                //         ),
+                //         Transform.rotate(
+                //           angle: 0, //-0.7854, // -45 degrees in radians
+                //           // child: const Divider(
+                //           //   thickness: 20,
+                //           //   color: Colors.black,
+                //           //   indent: 20, // 적절히 조정
+                //           //   endIndent: 20, // 적절히 조정
+                //           // ),
+                //           child: Text(
+                //             "/",
+                //             style: GoogleFonts.notoSerif(
+                //                 textStyle: const TextStyle(fontSize: 40),
+                //                 //  letterSpacing: 1.5,
+                //                 fontSize: 24),
+                //             textAlign: TextAlign.center,
+                //           ),
+                //         ),
+                //         Text(
+                //           "18",
+                //           style: GoogleFonts.notoSerif(
+                //               textStyle: const TextStyle(fontSize: 24),
+                //               letterSpacing: 1.5,
+                //               fontSize: 24),
+                //           textAlign: TextAlign.center,
+                //         ),
+                //       ],
+                //     ),
+                //     Text('유슬기',
+                //         style: GoogleFonts.notoSerif(
+                //             textStyle: const TextStyle(fontSize: 24)))
+                //   ],
+                // ),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 SizedBox(
                   //  width: 512,
                   //height: 512,
@@ -196,7 +193,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     children: [
                       Image.network(
                         //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
                         // height: 500,
                       ),
                       Positioned.fill(
@@ -221,7 +218,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 20,
                 ),
                 const Text(
-                  '2025년 1월 18일 토요일 오전 12시',
+                  '2025년 1월 18일 토요일 12시',
                   //style: TextStyle(fontWeight: FontWeight.w700),
                   textAlign: TextAlign.center,
                   //style: GoogleFonts.notoSerif(),
@@ -285,7 +282,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   //height: MediaQuery.of(context).size.width,
                   child: Image.network(
                     //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
                     // height: 500,
                   ),
                 ),
@@ -379,7 +376,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   width: MediaQuery.of(context).size.width * 1,
                   height: MediaQuery.of(context).size.width,
                   child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729604156/19_ylelfa.webp',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
                     // height: 500,
                   ),
                 ),
@@ -606,7 +603,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           BlendMode.darken,
                         ),
                         child: Image.network(
-                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729604156/19_ylelfa.webp',
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
                           fit: BoxFit.cover,
                         ),
                       ),
