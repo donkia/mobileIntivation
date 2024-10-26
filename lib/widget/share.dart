@@ -21,18 +21,18 @@ class Share extends StatelessWidget {
           // const SizedBox(
           //   height: 10,
           // ),
-          const Text('응원과 축하의 마음을 전해주신 모든 분들께'),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text('진심으로 감사드립니다.'),
-          const SizedBox(
-            height: 10,
-          ),
-          const Text('항상 건강하시고 행복하시길 기원드립니다.'),
-          const SizedBox(
-            height: 10,
-          ),
+          // const Text('응원과 축하의 마음을 전해주신 모든 분들께'),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          // const Text('진심으로 감사드립니다.'),
+          // const SizedBox(
+          //   height: 10,
+          // ),
+          // const Text('항상 건강하시고 행복하시길 기원드립니다.'),
+          // const SizedBox(
+          //   height: 10,
+          // ),
           /*
           OutlinedButton(
             onPressed: () {

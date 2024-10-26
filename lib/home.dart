@@ -135,24 +135,59 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text('김병현',
-                        style: GoogleFonts.gowunDodum(
+                        style: GoogleFonts.notoSerif(
                             textStyle: const TextStyle(fontSize: 24))),
-                    Text('01/18',
-                        style: GoogleFonts.gowunDodum(
-                            textStyle: const TextStyle(fontSize: 24))),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "01",
+                          style: GoogleFonts.notoSerif(
+                              textStyle: const TextStyle(fontSize: 24),
+                              letterSpacing: 1.5,
+                              fontSize: 24),
+                          textAlign: TextAlign.center,
+                        ),
+                        Transform.rotate(
+                          angle: 0, //-0.7854, // -45 degrees in radians
+                          // child: const Divider(
+                          //   thickness: 20,
+                          //   color: Colors.black,
+                          //   indent: 20, // 적절히 조정
+                          //   endIndent: 20, // 적절히 조정
+                          // ),
+                          child: Text(
+                            "/",
+                            style: GoogleFonts.notoSerif(
+                                textStyle: const TextStyle(fontSize: 40),
+                                //  letterSpacing: 1.5,
+                                fontSize: 24),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Text(
+                          "18",
+                          style: GoogleFonts.notoSerif(
+                              textStyle: const TextStyle(fontSize: 24),
+                              letterSpacing: 1.5,
+                              fontSize: 24),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                     Text('유슬기',
-                        style: GoogleFonts.gowunDodum(
+                        style: GoogleFonts.notoSerif(
                             textStyle: const TextStyle(fontSize: 24)))
                   ],
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 20,
                 ),
                 SizedBox(
                   //  width: 512,
@@ -203,20 +238,32 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 80,
                 ),
-                const Text(
-                  '[인사말]',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Divider(
-                    thickness: 1,
-                    color: Colors.grey,
+                // const Text(
+                //   '[인사말]',
+                //   textAlign: TextAlign.left,
+                //   style: TextStyle(fontWeight: FontWeight.w700),
+                // ),
+
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: Image.network(
+                    color: const Color.fromRGBO(245, 224, 224, 1),
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
+                    // height: 500,
                   ),
                 ),
+
+                // const Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: 20),
+                //   child: Divider(
+                //     thickness: 1,
+                //     color: Color.fromRGBO(245, 224, 224, 1),
+                //   ),
+                // ),
                 const SizedBox(
-                  height: 10,
+                  height: 20,
                 ),
                 const Text('6번째의 겨울이 지나'),
                 //_buildAnimatedText('6번째의 계절이 지나', 0),
@@ -353,22 +400,27 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-
-                const SizedBox(
-                  height: 80,
-                ),
-                const Text(
-                  '[예식일시]',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Divider(
-                    thickness: 1,
-                    color: Colors.grey,
-                  ),
-                ),
+                // const Text(
+                //   '[예식일시]',
+                //   textAlign: TextAlign.left,
+                //   style: TextStyle(fontWeight: FontWeight.w700),
+                // ),
+                // Text(
+                //   'Callendar',
+                //   textAlign: TextAlign.left,
+                //   style: GoogleFonts.notoSerif(
+                //       textStyle: const TextStyle(fontSize: 24),
+                //       color: const Color.fromRGBO(
+                //           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
+                //       ),
+                // ),
+                // const Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: 20),
+                //   child: Divider(
+                //     thickness: 1,
+                //     color: Color.fromRGBO(245, 224, 224, 1),
+                //   ),
+                // ),
                 const SizedBox(
                   height: 10,
                 ),
@@ -393,18 +445,25 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 80,
                 ),
-                const Text(
-                  '[갤러리]',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Divider(
-                    thickness: 1,
-                    color: Colors.grey,
-                  ),
-                ),
+                // const Text(
+                //   '[갤러리]',
+                //   textAlign: TextAlign.left,
+                //   style: TextStyle(fontWeight: FontWeight.w700),
+                // ),
+                // Text(
+                //   'Gallery',
+                //   textAlign: TextAlign.left,
+                //   style: GoogleFonts.notoSerif(
+                //       textStyle: const TextStyle(fontSize: 24),
+                //       color: const Color.fromRGBO(
+                //           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
+                //       ),
+                // ),
+                // const Padding(
+                //   padding: EdgeInsets.symmetric(horizontal: 20),
+                //   child: Divider(
+                //       thickness: 1, color: Color.fromRGBO(245, 224, 224, 1)),
+                // ),
                 //사진 갤러리 보여주기
                 const SizedBox(height: 750, child: Gallery()),
 
@@ -412,33 +471,51 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 80,
                 ),
 
-                const Text(
-                  '[오시는길]',
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
+                // const Text(
+                //   '[오시는길]',
+                //   textAlign: TextAlign.left,
+                //   style: TextStyle(fontWeight: FontWeight.w700),
+                // ),
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: Image.network(
+                    color: const Color.fromRGBO(245, 224, 224, 1),
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
+                    // height: 500,
+                  ),
                 ),
+                Text(
+                  'Location',
+                  textAlign: TextAlign.left,
+                  style: GoogleFonts.notoSerif(
+                      textStyle: const TextStyle(fontSize: 14),
+                      color: const Color.fromRGBO(
+                          245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
+                      ),
+                ),
+
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Divider(
-                    thickness: 1,
-                    color: Colors.grey,
-                  ),
+                      thickness: 1, color: Color.fromRGBO(245, 224, 224, 1)),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 const Text(
-                  '서울특별시 성동구 행당동 319-36',
+                  '서울특별시 성동구 고산자로 202',
                   textAlign: TextAlign.center,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('레노스블랑쉬웨딩홀'),
+                    const Text('레노스블랑쉬웨딩홀 블랑쉬홀'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(const ClipboardData(
-                                  text: '서울특별시 성동구 행당동 319-36'))
+                                  text: '서울특별시 성동구 고산자로 202'))
                               .then((_) {
                             ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
@@ -462,16 +539,35 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
-                  '[안내사항]',
+                // const Text(
+                //   '[안내사항]',
+                //   textAlign: TextAlign.left,
+                //   style: TextStyle(fontWeight: FontWeight.w700),
+                // ),
+                SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: Image.network(
+                      color: const Color.fromRGBO(245, 224, 224, 1),
+                      //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png'
+                      // height: 500,
+                      ),
+                ),
+                Text(
+                  'Information',
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
+                  style: GoogleFonts.notoSerif(
+                      textStyle: const TextStyle(fontSize: 14),
+                      color: const Color.fromRGBO(
+                          245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
+                      ),
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Divider(
                     thickness: 1,
-                    color: Colors.grey,
+                    color: Color.fromRGBO(245, 224, 224, 1),
                   ),
                 ),
                 const Notice(),
@@ -499,6 +595,67 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 10,
                 ),
+
+                SizedBox(
+                  width: double.infinity,
+                  child: Stack(
+                    children: [
+                      ColorFiltered(
+                        colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(0.4),
+                          BlendMode.darken,
+                        ),
+                        child: Image.network(
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729604156/19_ylelfa.webp',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const Positioned(
+                        //left: 16, // 왼쪽 여백
+                        //left: MediaQuery.of(context).size.width / 2,
+
+                        //top: MediaQuery.of(context).size.height / 2,
+                        // 중간 위치 조정 (40은 텍스트 높이의 절반)
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('\n\n\n'),
+                              Text(
+                                '응원과 축하의 마음을 전해주신 모든 분들께',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 8), // 줄 간격
+                              Text(
+                                '진심으로 감사드립니다.',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 8), // 줄 간격
+                              Text(
+                                '항상 건강하시고 행복하시길 기원드립니다.',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 const Share(),
                 const Buttom()
               ],
