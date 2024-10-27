@@ -27,8 +27,6 @@ class ImageGridScreen extends StatefulWidget {
 
 class _ImageGridScreenState extends State<ImageGridScreen>
     with AutomaticKeepAliveClientMixin<ImageGridScreen> {
-  @override
-  bool get wantKeepAlive => true;
   int? selectedIndex;
 /*
   final List<String> imagePaths = [
@@ -81,114 +79,112 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   Widget build(BuildContext context) {
     // TODO: implement build
     super.build(context);
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          // GridView를 백그라운드에 배치
-          GridView.builder(
-            cacheExtent: 5000,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 1.0,
-                mainAxisExtent: 150.0),
-            itemCount: imagePaths.length,
-            itemBuilder: (context, index) {
-              return GestureDetector(
-                onTap: () {
+    print('gridview 랜더링!');
+    return Stack(
+      children: [
+        // GridView를 백그라운드에 배치
+        GridView.builder(
+          cacheExtent: 5000,
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
+          itemCount: imagePaths.length,
+          itemBuilder: (context, index) {
+            return GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedIndex = index; // 선택된 인덱스를 저장
+                });
+              },
+              child: Card(
+                color: Colors.white,
+                child: CachedNetworkImage(
+                  imageUrl: imagePaths[index],
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) =>
+                      const Center(child: CircularProgressIndicator()),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ),
+              ),
+            );
+          },
+        ),
+        // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
+        if (selectedIndex != null) ...[
+          // 백그라운드 블러 처리 (선택적으로)
+          Container(
+            color: Colors.black54, // 블러 효과를 주기 위한 반투명 배경
+          ),
+          // 상세 이미지 표시
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              leading: IconButton(
+                icon: const Icon(Icons.close, color: Colors.white),
+                onPressed: () {
                   setState(() {
-                    selectedIndex = index; // 선택된 인덱스를 저장
+                    selectedIndex = null; // 뒤로가기 버튼을 누르면 GridView로 돌아감
                   });
                 },
-                child: Card(
-                  color: Colors.white,
-                  child: CachedNetworkImage(
-                    imageUrl: imagePaths[index],
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) =>
-                        const Center(child: CircularProgressIndicator()),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
-                  ),
-                ),
-              );
-            },
-          ),
-          // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
-          if (selectedIndex != null) ...[
-            // 백그라운드 블러 처리 (선택적으로)
-            Container(
-              color: Colors.black54, // 블러 효과를 주기 위한 반투명 배경
-            ),
-            // 상세 이미지 표시
-            Scaffold(
-              backgroundColor: Colors.transparent,
-              appBar: AppBar(
-                backgroundColor: Colors.transparent,
-                elevation: 0,
-                leading: IconButton(
-                  icon: const Icon(Icons.close, color: Colors.white),
-                  onPressed: () {
-                    setState(() {
-                      selectedIndex = null; // 뒤로가기 버튼을 누르면 GridView로 돌아감
-                    });
-                  },
-                ),
               ),
-              body: Center(
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
+            ),
+            body: Center(
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = null; // 상세 이미지를 클릭하면 GridView로 돌아감
+                      });
+                    },
+                    child: CachedNetworkImage(
+                      imageUrl: imagePaths[selectedIndex!],
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                  // 왼쪽 화살표: 이전 이미지로 이동
+                  Positioned(
+                    left: 20,
+                    child: IconButton(
+                      onPressed: () {
                         setState(() {
-                          selectedIndex = null; // 상세 이미지를 클릭하면 GridView로 돌아감
+                          // 이전 이미지로 이동, 첫 번째 이미지에서는 마지막 이미지로 이동
+                          selectedIndex =
+                              (selectedIndex! - 1 + imagePaths.length) %
+                                  imagePaths.length;
                         });
                       },
-                      child: CachedNetworkImage(
-                        imageUrl: imagePaths[selectedIndex!],
-                        fit: BoxFit.contain,
-                      ),
+                      icon: const Icon(Icons.arrow_back,
+                          color: Colors.white, size: 30),
                     ),
-                    // 왼쪽 화살표: 이전 이미지로 이동
-                    Positioned(
-                      left: 20,
-                      child: IconButton(
-                        onPressed: () {
-                          setState(() {
-                            // 이전 이미지로 이동, 첫 번째 이미지에서는 마지막 이미지로 이동
-                            selectedIndex =
-                                (selectedIndex! - 1 + imagePaths.length) %
-                                    imagePaths.length;
-                          });
-                        },
-                        icon: const Icon(Icons.arrow_back,
-                            color: Colors.white, size: 30),
-                      ),
+                  ),
+                  // 오른쪽 화살표: 다음 이미지로 이동
+                  Positioned(
+                    right: 20,
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          // 다음 이미지로 이동, 마지막 이미지는 첫 이미지로 돌아감
+                          selectedIndex =
+                              (selectedIndex! + 1) % imagePaths.length;
+                        });
+                      },
+                      icon: const Icon(Icons.arrow_forward,
+                          color: Colors.white, size: 30),
                     ),
-                    // 오른쪽 화살표: 다음 이미지로 이동
-                    Positioned(
-                      right: 20,
-                      child: IconButton(
-                        onPressed: () {
-                          setState(() {
-                            // 다음 이미지로 이동, 마지막 이미지는 첫 이미지로 돌아감
-                            selectedIndex =
-                                (selectedIndex! + 1) % imagePaths.length;
-                          });
-                        },
-                        icon: const Icon(Icons.arrow_forward,
-                            color: Colors.white, size: 30),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-          ],
+          ),
         ],
-      ),
+      ],
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

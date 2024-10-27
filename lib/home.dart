@@ -217,20 +217,22 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
+                Text(
                   '2025년 1월 18일 토요일 12시',
                   //style: TextStyle(fontWeight: FontWeight.w700),
+                  style: GoogleFonts.notoSerif(),
                   textAlign: TextAlign.center,
                   //style: GoogleFonts.notoSerif(),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   '레노스블랑쉬웨딩홀 블랑쉬홀',
                   //style: GoogleFonts.notoSerif(),
                   //style: TextStyle(fontWeight: FontWeight.w700),
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.notoSerif(),
                 ),
                 const SizedBox(
                   height: 80,
@@ -262,18 +264,27 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text('6번째의 겨울이 지나'),
+                Text(
+                  '6번째의 겨울이 지나',
+                  style: GoogleFonts.notoSerif(),
+                ),
                 //_buildAnimatedText('6번째의 계절이 지나', 0),
                 const SizedBox(
                   height: 10,
                 ),
                 //_buildAnimatedText('7번째 계절부터는', 1),
-                const Text('7번째의 겨울부터는'),
+                Text(
+                  '7번째의 겨울부터는',
+                  style: GoogleFonts.notoSerif(),
+                ),
                 const SizedBox(
                   height: 10,
                 ),
                 //_buildAnimatedText('함께하고자 합니다.', 2),
-                const Text('사랑의 결실을 맺고자합니다.'),
+                Text(
+                  '사랑의 결실을 맺고자합니다.',
+                  style: GoogleFonts.notoSerif(),
+                ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -303,9 +314,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
+                Text(
                   '대학교 어느 수업\n프로젝트에서 한팀이 되어 처음 만났습니다.\n이제는 한 가정으로써\n프로젝트를 다시 시작하려고 합니다.',
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.notoSerif(),
                 ),
                 /*
               _buildAnimatedText(
@@ -322,9 +334,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
+                Text(
                   '프로젝트가 성공적으로 오픈할 수 있도록\n참석하여 지혜와 용기를\n저희에게 나누어주십시오.',
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.notoSerif(),
                 ),
                 /*
               _buildAnimatedText(
@@ -435,7 +448,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   children: [
                     Text(
                       '병현❤️슬기 결혼식이 ${getDday()}일 남았습니다.',
-                      style: const TextStyle(fontWeight: FontWeight.w700),
+                      style: GoogleFonts.notoSerif(fontWeight: FontWeight.w700),
                     ),
                   ],
                 ),
@@ -503,22 +516,28 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   '서울특별시 성동구 고산자로 202',
                   textAlign: TextAlign.center,
+                  style: GoogleFonts.notoSerif(),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('레노스블랑쉬웨딩홀 블랑쉬홀'),
+                    Text(
+                      '레노스블랑쉬웨딩홀 블랑쉬홀',
+                      style: GoogleFonts.notoSerif(),
+                    ),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(const ClipboardData(
                                   text: '서울특별시 성동구 고산자로 202'))
                               .then((_) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                    content: Text('주소 복사가 완료되었습니다!')));
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text(
+                              '주소 복사가 완료되었습니다!',
+                              style: GoogleFonts.notoSerif(),
+                            )));
                           });
                         },
                         icon: const Icon(
@@ -574,10 +593,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 30,
                 ),
-                const Text(
+                Text(
                   '[마음 전하실 곳]',
                   textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.w700),
+                  style: GoogleFonts.notoSerif(fontWeight: FontWeight.w700),
                 ),
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -610,7 +629,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      const Positioned(
+                      Positioned(
                         //left: 16, // 왼쪽 여백
                         //left: MediaQuery.of(context).size.width / 2,
 
@@ -621,28 +640,26 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text('\n\n\n'),
+                              const Text('\n\n\n'),
                               Text(
                                 '응원과 축하의 마음을 전해주신 모든 분들께',
-                                style: TextStyle(
+                                style: GoogleFonts.notoSerif(
                                   color: Colors.white,
                                   fontSize: 16,
-                                  //fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 8), // 줄 간격
+                              const SizedBox(height: 8), // 줄 간격
                               Text(
                                 '진심으로 감사드립니다.',
-                                style: TextStyle(
+                                style: GoogleFonts.notoSerif(
                                   color: Colors.white,
                                   fontSize: 16,
-                                  //fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 8), // 줄 간격
+                              const SizedBox(height: 8), // 줄 간격
                               Text(
                                 '항상 건강하시고 행복하시길 기원드립니다.',
-                                style: TextStyle(
+                                style: GoogleFonts.notoSerif(
                                   color: Colors.white,
                                   fontSize: 16,
                                   //fontWeight: FontWeight.bold,
