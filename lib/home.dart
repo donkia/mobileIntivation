@@ -242,8 +242,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 // ),
 
                 SizedBox(
-                  width: 30,
-                  height: 30,
+                  width: 50,
+                  height: 50,
                   child: Image.network(
                     color: const Color.fromRGBO(245, 224, 224, 1),
                     //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
@@ -483,11 +483,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     // height: 500,
                   ),
                 ),
+
                 Text(
                   'Location',
                   textAlign: TextAlign.left,
                   style: GoogleFonts.notoSerif(
-                      textStyle: const TextStyle(fontSize: 14),
+                      textStyle: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.w700),
                       color: const Color.fromRGBO(
                           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
                       ),
@@ -555,7 +557,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   'Information',
                   textAlign: TextAlign.left,
                   style: GoogleFonts.notoSerif(
-                      textStyle: const TextStyle(fontSize: 14),
+                      textStyle: const TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.w700),
                       color: const Color.fromRGBO(
                           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
                       ),
@@ -623,8 +626,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 '응원과 축하의 마음을 전해주신 모든 분들께',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  //fontWeight: FontWeight.bold,
                                 ),
                               ),
                               SizedBox(height: 8), // 줄 간격
@@ -632,8 +635,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 '진심으로 감사드립니다.',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  //fontWeight: FontWeight.bold,
                                 ),
                               ),
                               SizedBox(height: 8), // 줄 간격
@@ -641,8 +644,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                 '항상 건강하시고 행복하시길 기원드립니다.',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  //fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],

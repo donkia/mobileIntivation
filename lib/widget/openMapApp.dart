@@ -104,18 +104,26 @@ class OpenMapApp extends StatelessWidget {
             ),
           ),
         ]),
-        const Padding(
-          padding: EdgeInsets.all(20.0),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start, //왼쪽 정렬 설정
 
             children: [
-              Text(
-                '지하철',
-                // textAlign: TextAlign.start,
-                style: TextStyle(fontWeight: FontWeight.w700),
+              Row(
+                children: [
+                  Image.network(
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729990085/subway_wxoaiu.webp',
+                    height: 25, // 이미지 크기 설정
+                  ),
+                  const Text(
+                    '  지하철',
+                    // textAlign: TextAlign.start,
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+                  ),
+                ],
               ),
-              Text.rich(
+              const Text.rich(
                 TextSpan(
                   children: [
                     TextSpan(text: '- '),
@@ -150,7 +158,7 @@ class OpenMapApp extends StatelessWidget {
                   ],
                 ),
               ),
-              Text.rich(
+              const Text.rich(
                 TextSpan(
                   children: [
                     TextSpan(text: '- '),
@@ -165,27 +173,97 @@ class OpenMapApp extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text.rich(
+              Row(
+                children: [
+                  Image.network(
+                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729897164/bus_c73vik.png',
+                    height: 30,
+                    // height: 500,
+                  ),
+                  const Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: ' 버스',
+                          style: TextStyle(
+                              //color: Colors.purple, // 원하는 색상
+                              fontWeight: FontWeight.w700),
+                        ),
+                        TextSpan(text: ' : 무학여고 하차'),
+                        //TextSpan(text: ' 입니다.'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const Text.rich(
                 TextSpan(
                   children: [
+                    TextSpan(text: ' '),
                     TextSpan(
-                      text: '버스',
+                      text: '●',
                       style: TextStyle(
-                          //color: Colors.purple, // 원하는 색상
+                          color: Color.fromRGBO(61, 195, 68, 1), // 원하는 색상
                           fontWeight: FontWeight.w700),
                     ),
-                    TextSpan(text: ' : 무학여고 하차'),
+                    TextSpan(text: ' 지선버스 : 2016, 4211'),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ), //61, 195, 68
+              const Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: ' '),
+                    TextSpan(
+                      text: '●',
+                      style: TextStyle(
+                          color: Color.fromRGBO(56, 109, 232, 1), // 원하는 색상
+                          fontWeight: FontWeight.w700),
+                    ),
+                    TextSpan(
+                        text: ' 간선버스 : 110A, 141, 145, 148, 241, 421, 463'),
                     //TextSpan(text: ' 입니다.'),
                   ],
                 ),
               ),
-              Text('- 지선(초록) : 2016, 4211'),
-              Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
-              Text('- 마을버스 : 성동02, 성동08'),
-              Text('- 공항버스 : 6010(인천)'),
+              const Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: ' '),
+                    TextSpan(
+                      text: '●',
+                      style: TextStyle(
+                          color: Color.fromRGBO(61, 195, 68, 1), // 원하는 색상
+                          fontWeight: FontWeight.w700),
+                    ),
+                    TextSpan(text: ' 마을버스 : 성동02, 성동08'),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ),
+              const Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(text: ' '),
+                    TextSpan(
+                      text: '●',
+                      style: TextStyle(
+                          color: Color.fromRGBO(101, 166, 210, 1), // 원하는 색상
+                          fontWeight: FontWeight.w700),
+                    ),
+                    TextSpan(text: ' 공항버스 : 6010(인천)'),
+                    //TextSpan(text: ' 입니다.'),
+                  ],
+                ),
+              ),
+              // Text('- 지선(초록) : 2016, 4211'),
+              // Text('- 간선(파랑) : 110A, 141, 145, 148, 241, 421, 463'),
+              // Text('- 마을버스 : 성동02, 성동08'),
+              // Text('- 공항버스 : 6010(인천)'),
             ],
           ),
         ),
