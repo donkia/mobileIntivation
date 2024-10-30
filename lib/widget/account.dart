@@ -72,11 +72,11 @@ class _AccountState extends State<Account> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('신랑 아버지 : 신한은행 110475039706'),
+                    const Text('신랑 아버지 : 국민은행 51392501035551'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '110475039706'));
+                              const ClipboardData(text: '51392501035551'));
                         },
                         icon: const Icon(
                           Icons.copy,
@@ -90,11 +90,11 @@ class _AccountState extends State<Account> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('신랑 어머니 : 신한은행 110475039706'),
+                    const Text('신랑 어머니 : 우리은행 1002856058754'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '110475039706'));
+                              const ClipboardData(text: '1002856058754'));
                         },
                         icon: const Icon(
                           Icons.copy,

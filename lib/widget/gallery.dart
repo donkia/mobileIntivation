@@ -28,50 +28,28 @@ class ImageGridScreen extends StatefulWidget {
 class _ImageGridScreenState extends State<ImageGridScreen>
     with AutomaticKeepAliveClientMixin<ImageGridScreen> {
   int? selectedIndex;
-/*
-  final List<String> imagePaths = [
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201842/12_wduffi.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/10_tpzfhi.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/9_gnqnse.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/1_o0jzqi.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/11_e0mpel.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/14_igvqrv.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/13_w1ts1z.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/15_swxou3.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/4_tyi5zq.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/7_tlrlic.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/16_lhojdj.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201838/5_nm4igx.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/17_keq3um.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/18_opv375.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/6_mr4yev.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201837/8_jgzior.webp',
-  ];
-  */
 
   final List<String> imagePaths = [
     //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904920/12_xbchus.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
     // 'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/15_cfvdzp.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904921/14_mdlxp4.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032054/15_1_mh2igl.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032060/14_1_kwgd9c.webp',
 
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904921/13_xdpqhy.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904916/6_ecpcdh.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032056/13_1_jrpijc.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032051/6_1_qkpld6.webp',
 
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904920/11_xafjdi.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904923/17_bgkb8o.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032046/11_1_joqpkn.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/17_1_rw98i7.webp',
 
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904918/10_nlzvg3.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/9_wvg2p6.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/5_hwlrbj.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/8_ct5s9w.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904917/7_dkll7w.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/2_lonjtg.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/4_rddsve.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904915/3_fmslex.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032047/10_1_kxrlzk.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032041/9_1_izl4xr.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032058/5_1_yiguq0.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032050/8_1_zajbwl.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032052/7_1_iskity.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032055/2_1_kkxm1w.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/4_1_pbsvxf.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032049/3_1_p36u1i.webp',
     // 'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
   ];
 
