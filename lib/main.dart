@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mobile_invitation/home.dart';
 import 'firebase_options.dart'; // Firebase CLI로 생성된 파일
 
@@ -49,7 +50,11 @@ class FirebaseInit extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CircularProgressIndicator(),
+                //CircularProgressIndicator(),
+                SpinKitPumpingHeart(
+                  color: Colors.red,
+                  size: 50,
+                ),
                 SizedBox(height: 20), // 간격
                 Text('초대장을 준비 중입니다.방문해주셔서 감사드립니다!'),
               ],
