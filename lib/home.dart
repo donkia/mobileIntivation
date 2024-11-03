@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobile_invitation/widget/account.dart';
@@ -87,44 +88,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     });
   }
 
-  // Widget _buildAnimatedText(String text, int index) {
-  //   // 스크롤에 따라 애니메이션이 적용되도록 조정
-  //   double start = index * 250.0;
-  //   double end = start + 250.0;
-
-  //   double animateValue =
-  //       (_scrollPosition - start / end - start).clamp(0.0, 1.0);
-  //   return Opacity(
-  //     opacity: animateValue,
-  //     child: Transform.translate(
-  //       offset: Offset(0, 50 * (1 - animateValue)),
-  //       child: Text(
-  //         text,
-  //         textAlign: TextAlign.center,
-  //       ),
-  //     ),
-  //   );
-  // }
-
-  // Widget _buildAnimatedBoldText(String text, int index) {
-  //   // 스크롤에 따라 애니메이션이 적용되도록 조정
-  //   double start = index * 250.0;
-  //   double end = start + 250.0;
-
-  //   double animateValue =
-  //       (_scrollPosition - start / end - start).clamp(0.0, 1.0);
-  //   return Opacity(
-  //     opacity: animateValue,
-  //     child: Transform.translate(
-  //       offset: Offset(0, 50 * (1 - animateValue)),
-  //       child: Text(
-  //         text,
-  //         textAlign: TextAlign.center,
-  //       ),
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return _isLoading
@@ -134,74 +97,35 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             // controller: _scrollController,
             child: Column(
               children: [
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //   children: [
-                //     Text('김병현',
-                //         style: GoogleFonts.notoSerif(
-                //             textStyle: const TextStyle(fontSize: 24))),
-                //     Column(
-                //       mainAxisAlignment: MainAxisAlignment.center,
-                //       children: [
-                //         Text(
-                //           "01",
-                //           style: GoogleFonts.notoSerif(
-                //               textStyle: const TextStyle(fontSize: 24),
-                //               letterSpacing: 1.5,
-                //               fontSize: 24),
-                //           textAlign: TextAlign.center,
-                //         ),
-                //         Transform.rotate(
-                //           angle: 0, //-0.7854, // -45 degrees in radians
-                //           // child: const Divider(
-                //           //   thickness: 20,
-                //           //   color: Colors.black,
-                //           //   indent: 20, // 적절히 조정
-                //           //   endIndent: 20, // 적절히 조정
-                //           // ),
-                //           child: Text(
-                //             "/",
-                //             style: GoogleFonts.notoSerif(
-                //                 textStyle: const TextStyle(fontSize: 40),
-                //                 //  letterSpacing: 1.5,
-                //                 fontSize: 24),
-                //             textAlign: TextAlign.center,
-                //           ),
-                //         ),
-                //         Text(
-                //           "18",
-                //           style: GoogleFonts.notoSerif(
-                //               textStyle: const TextStyle(fontSize: 24),
-                //               letterSpacing: 1.5,
-                //               fontSize: 24),
-                //           textAlign: TextAlign.center,
-                //         ),
-                //       ],
-                //     ),
-                //     Text('유슬기',
-                //         style: GoogleFonts.notoSerif(
-                //             textStyle: const TextStyle(fontSize: 24)))
-                //   ],
-                // ),
-                // const SizedBox(
-                //   height: 20,
-                // ),
                 SizedBox(
                   //  width: 512,
                   //height: 512,
                   child: Stack(
                     children: [
-                      Image.network(
-                        //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
-                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
-                        // height: 500,
-                      ),
+                      CachedNetworkImage(
+                        imageUrl:
+                            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+                      )
+                      // Image.network(
+                      //   //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
+                      //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+                      //   // height: 500,
+                      // ),
+                      ,
                       Positioned.fill(
-                          child: Image.network(
-                        'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
+                          child: CachedNetworkImage(
+                        imageUrl:
+                            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
                         fit: BoxFit.cover,
-                        // height: 500,
-                      ))
+                      )
+
+                          //     Image.network(
+                          //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
+                          //   fit: BoxFit.cover,
+                          //   // height: 500,
+                          // )
+
+                          )
                     ],
                     //child:
                   ),
@@ -209,11 +133,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 20,
                 ),
-                // const Text(
-                //   '김병현 | 유슬기',
-                //   textAlign: TextAlign.center,
-                //   style: TextStyle(fontSize: 30),
-                // ),
+
                 const SizedBox(
                   height: 20,
                 ),
@@ -237,30 +157,24 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 80,
                 ),
-                // const Text(
-                //   '[인사말]',
-                //   textAlign: TextAlign.left,
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
 
                 SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Image.network(
-                    color: const Color.fromRGBO(245, 224, 224, 1),
-                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
-                    // height: 500,
-                  ),
-                ),
+                    width: 50,
+                    height: 50,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
+                      color: const Color.fromRGBO(245, 224, 224, 1),
+                    )
 
-                // const Padding(
-                //   padding: EdgeInsets.symmetric(horizontal: 20),
-                //   child: Divider(
-                //     thickness: 1,
-                //     color: Color.fromRGBO(245, 224, 224, 1),
-                //   ),
-                // ),
+                    //  Image.network(
+                    //   color: const Color.fromRGBO(245, 224, 224, 1),
+                    //   //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
+                    //   // height: 500,
+                    // ),
+                    ),
+
                 const SizedBox(
                   height: 20,
                 ),
@@ -289,28 +203,19 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 20,
                 ),
                 SizedBox(
-                  //width: MediaQuery.of(context).size.width * 1,
-                  //height: MediaQuery.of(context).size.width,
-                  child: Image.network(
-                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
-                    // height: 500,
-                  ),
-                ),
-                /*
-              AnimatedOpacity(
-                opacity: _opacity,
-                duration: const Duration(milliseconds: 2000),
-                child: SizedBox(
-                  width: 512,
-                  height: 512,
-                  child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477075/2_dbpjqj.jpg',
-                    // height: 500,
-                  ),
-                ),
-              ),
-            */
+                    //width: MediaQuery.of(context).size.width * 1,
+                    //height: MediaQuery.of(context).size.width,
+                    child: CachedNetworkImage(
+                  imageUrl:
+                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+                )
+
+                    // Image.network(
+                    //   //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+                    //   // height: 500,
+                    // ),
+                    ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -319,18 +224,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.notoSerif(),
                 ),
-                /*
-              _buildAnimatedText(
-                  '대학교 어느 수업\n프로젝트에서 한팀이 되어 처음 만났습니다.\n 이제는 한 가정으로써\n 프로젝트를 다시 시작하려고 합니다.',
-                  3),*/
-                /*
-              const Text(
-                '겨울의 따뜻한 햇살 아래\n 저희 두 사람이 소중한 분들을 모시고\n 사랑으로 하나되어\n 한길을 걸어가고자 합니다.',
-                textAlign: TextAlign.center,
-                maxLines: 5,
-                //style: TextStyle(color: Color(0xff1877F2), fontSize: 19),
-              ),
-              */
+
                 const SizedBox(
                   height: 30,
                 ),
@@ -339,18 +233,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.notoSerif(),
                 ),
-                /*
-              _buildAnimatedText(
-                  '프로젝트가 성공적으로 오픈할 수 있도록\n 참석하여 지혜와 용기를\n 저희에게 나누어주십시오.', 4),
-                  */
-                /*
-              const Text(
-                '한곳을 바라보며 첫발을 내딛는 자리\n 그 시작에 함께해 주시면\n 더없는 기쁨으로 간직하겠습니다.',
-                textAlign: TextAlign.center,
-                maxLines: 5,
-                //style: TextStyle(color: Color(0xff1877F2), fontSize: 19),
-              ),
-              */
+
                 const SizedBox(
                   height: 50,
                 ),
@@ -386,59 +269,27 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ],
                 ),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width * 1,
-                  height: MediaQuery.of(context).size.width,
-                  child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
-                    // height: 500,
-                  ),
-                ),
-                /*
-              AnimatedOpacity(
-                opacity: _opacity,
-                duration: const Duration(milliseconds: 2000),
-                child: SizedBox(
-                  // width: 512,
-                  //height: 512,
-                  child: Image.network(
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1728477077/19_nlkfdx.jpg',
-                    // height: 500,
-                  ),
-                ),
-              ),
-              */
+                    width: MediaQuery.of(context).size.width * 1,
+                    height: MediaQuery.of(context).size.width,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
+                    )
+
+                    // Image.network(
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
+                    //   // height: 500,
+                    // ),
+                    ),
+
                 const SizedBox(
                   height: 20,
                 ),
-                // const Text(
-                //   '[예식일시]',
-                //   textAlign: TextAlign.left,
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
-                // Text(
-                //   'Callendar',
-                //   textAlign: TextAlign.left,
-                //   style: GoogleFonts.notoSerif(
-                //       textStyle: const TextStyle(fontSize: 24),
-                //       color: const Color.fromRGBO(
-                //           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
-                //       ),
-                // ),
-                // const Padding(
-                //   padding: EdgeInsets.symmetric(horizontal: 20),
-                //   child: Divider(
-                //     thickness: 1,
-                //     color: Color.fromRGBO(245, 224, 224, 1),
-                //   ),
-                // ),
+
                 const SizedBox(
                   height: 10,
                 ),
 
-                // const Text(
-                //   '1월',
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
                 const CustomCalendar(),
                 const SizedBox(
                   height: 15,
@@ -455,25 +306,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 80,
                 ),
-                // const Text(
-                //   '[갤러리]',
-                //   textAlign: TextAlign.left,
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
-                // Text(
-                //   'Gallery',
-                //   textAlign: TextAlign.left,
-                //   style: GoogleFonts.notoSerif(
-                //       textStyle: const TextStyle(fontSize: 24),
-                //       color: const Color.fromRGBO(
-                //           245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
-                //       ),
-                // ),
-                // const Padding(
-                //   padding: EdgeInsets.symmetric(horizontal: 20),
-                //   child: Divider(
-                //       thickness: 1, color: Color.fromRGBO(245, 224, 224, 1)),
-                // ),
+
                 //사진 갤러리 보여주기
                 const SizedBox(height: 750, child: Gallery()),
 
@@ -481,21 +314,22 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   height: 80,
                 ),
 
-                // const Text(
-                //   '[오시는길]',
-                //   textAlign: TextAlign.left,
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
                 SizedBox(
-                  width: 30,
-                  height: 30,
-                  child: Image.network(
-                    color: const Color.fromRGBO(245, 224, 224, 1),
-                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-                    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
-                    // height: 500,
-                  ),
-                ),
+                    width: 30,
+                    height: 30,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
+                      color: const Color.fromRGBO(245, 224, 224, 1),
+                    )
+
+                    // Image.network(
+                    //   color: const Color.fromRGBO(245, 224, 224, 1),
+                    //   //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
+                    //   // height: 500,
+                    // ),
+                    ),
 
                 Text(
                   'Location',
@@ -557,21 +391,23 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 const SizedBox(
                   height: 30,
                 ),
-                // const Text(
-                //   '[안내사항]',
-                //   textAlign: TextAlign.left,
-                //   style: TextStyle(fontWeight: FontWeight.w700),
-                // ),
+
                 SizedBox(
-                  width: 30,
-                  height: 30,
-                  child: Image.network(
+                    width: 30,
+                    height: 30,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png',
                       color: const Color.fromRGBO(245, 224, 224, 1),
-                      //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
-                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png'
-                      // height: 500,
-                      ),
-                ),
+                    )
+
+                    //  Image.network(
+                    //     color: const Color.fromRGBO(245, 224, 224, 1),
+                    //     //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
+                    //     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png'
+                    //     // height: 500,
+                    //     ),
+                    ),
                 Text(
                   'Information',
                   textAlign: TextAlign.left,
@@ -620,15 +456,21 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   child: Stack(
                     children: [
                       ColorFiltered(
-                        colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.4),
-                          BlendMode.darken,
-                        ),
-                        child: Image.network(
-                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                          colorFilter: ColorFilter.mode(
+                            Colors.black.withOpacity(0.4),
+                            BlendMode.darken,
+                          ),
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
+                            fit: BoxFit.cover,
+                          )
+
+                          // Image.network(
+                          //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
+                          //   fit: BoxFit.cover,
+                          // ),
+                          ),
                       Positioned(
                         //left: 16, // 왼쪽 여백
                         //left: MediaQuery.of(context).size.width / 2,
