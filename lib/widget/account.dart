@@ -47,9 +47,9 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80E6F7F8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신랑 김병현 : 신한은행 110475039706'),
+                    const Text('  신랑 김병현 : 신한은행 110-475-039706  '),
                     Row(
                         //width: 100,
                         //height: 100,
@@ -70,9 +70,9 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80E6F7F8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신랑 아버지 : 국민은행 51392501035551'),
+                    const Text('  신랑 아버지 : 국민은행 513925-01-035551'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
@@ -88,9 +88,9 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80E6F7F8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신랑 어머니 : 우리은행 1002856058754'),
+                    const Text('  신랑 어머니 : 우리은행 1002-856-058754'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
@@ -133,13 +133,13 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80FFF1F1),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신부 유슬기 : 기업은행 110475039706'),
+                    const Text('  신부 유슬기 : 기업은행 01051313325     '),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '110475039706'));
+                              const ClipboardData(text: '01051313325'));
                         },
                         icon: const Icon(
                           Icons.copy,
@@ -151,13 +151,13 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80FFF1F1),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신부 아버지 : 신한은행 110475039706'),
+                    const Text('  신부 아버지 : 기업은행 033-074504-02-012'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '110475039706'));
+                              const ClipboardData(text: '03307450402012'));
                         },
                         icon: const Icon(
                           Icons.copy,
@@ -169,13 +169,13 @@ class _AccountState extends State<Account> {
               Container(
                 color: const Color(0x80FFF1F1),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('신부 어머니 : 신한은행 110475039706'),
+                    const Text('  신부 어머니 : 국민은행 933901-01-078633 '),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '110475039706'));
+                              const ClipboardData(text: '93390101078633'));
                         },
                         icon: const Icon(
                           Icons.copy,
