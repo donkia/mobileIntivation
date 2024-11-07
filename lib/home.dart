@@ -317,7 +317,7 @@ class Home extends StatelessWidget {
           // 네이버 지도
           const SizedBox(
             height: 400,
-            child: NaverMap(),
+            //  child: NaverMap(),
           ),
           // 지도 어플리케이션 연동
           const OpenMapApp(),
