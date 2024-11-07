@@ -46,7 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1028886848502',
     projectId: 'wedding-17302',
     authDomain: 'wedding-17302.firebaseapp.com',
-    storageBucket: 'wedding-17302.appspot.com',
+    storageBucket: 'wedding-17302.firebasestorage.app',
     measurementId: 'G-DBX7D9WP1N',
   );
 
@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
     appId: '1:1028886848502:android:9455742fa1224e95005dd7',
     messagingSenderId: '1028886848502',
     projectId: 'wedding-17302',
-    storageBucket: 'wedding-17302.appspot.com',
+    storageBucket: 'wedding-17302.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -63,7 +63,7 @@ class DefaultFirebaseOptions {
     appId: '1:1028886848502:ios:8fa60be39eb5297e005dd7',
     messagingSenderId: '1028886848502',
     projectId: 'wedding-17302',
-    storageBucket: 'wedding-17302.appspot.com',
+    storageBucket: 'wedding-17302.firebasestorage.app',
     iosBundleId: 'com.example.mobileInvitation',
   );
 
@@ -72,7 +72,7 @@ class DefaultFirebaseOptions {
     appId: '1:1028886848502:ios:8fa60be39eb5297e005dd7',
     messagingSenderId: '1028886848502',
     projectId: 'wedding-17302',
-    storageBucket: 'wedding-17302.appspot.com',
+    storageBucket: 'wedding-17302.firebasestorage.app',
     iosBundleId: 'com.example.mobileInvitation',
   );
 
@@ -82,7 +82,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1028886848502',
     projectId: 'wedding-17302',
     authDomain: 'wedding-17302.firebaseapp.com',
-    storageBucket: 'wedding-17302.appspot.com',
+    storageBucket: 'wedding-17302.firebasestorage.app',
     measurementId: 'G-8VK1CYV5EG',
   );
 
