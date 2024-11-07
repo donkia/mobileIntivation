@@ -33,36 +33,35 @@ class FirebaseInit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return FutureBuilder(
-    //   // Firebase 초기화
-    //   future: Firebase.initializeApp(
-    //     options: DefaultFirebaseOptions.currentPlatform,
-    //   ),
-    //   builder: (context, snapshot) {
-    //     // 초기화가 완료되었으면 홈 화면으로 이동
-    //     if (snapshot.connectionState == ConnectionState.done) {
-    //       return const Home();
-    //     }
+    return FutureBuilder(
+      // Firebase 초기화
+      future: Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      builder: (context, snapshot) {
+        // 초기화가 완료되었으면 홈 화면으로 이동
+        if (snapshot.connectionState == ConnectionState.done) {
+          return const Home();
+        }
 
-    //     // 초기화 중일 때 로딩 화면 표시
-    //     return const Scaffold(
-    //       body: Center(
-    //         child: Column(
-    //           mainAxisAlignment: MainAxisAlignment.center,
-    //           children: [
-    //             //CircularProgressIndicator(),
-    //             SpinKitPumpingHeart(
-    //               color: Colors.red,
-    //               size: 50,
-    //             ),
-    //             SizedBox(height: 20), // 간격
-    //             Text('청첩장을 준비 중입니다.방문해주셔서 감사드립니다!'),
-    //           ],
-    //         ), // 로딩 애니메이션
-    //       ),
-    //     );
-    //   },
-    // );
-    return const Home();
+        // 초기화 중일 때 로딩 화면 표시
+        return const Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //CircularProgressIndicator(),
+                SpinKitPumpingHeart(
+                  color: Colors.red,
+                  size: 50,
+                ),
+                SizedBox(height: 20), // 간격
+                Text('청첩장을 준비 중입니다.방문해주셔서 감사드립니다!'),
+              ],
+            ), // 로딩 애니메이션
+          ),
+        );
+      },
+    );
   }
 }
