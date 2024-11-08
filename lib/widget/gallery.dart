@@ -81,6 +81,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
                 child: CachedNetworkImage(
                   imageUrl: imagePaths[index],
                   fit: BoxFit.cover,
+                  memCacheHeight: 150,
                   placeholder: (context, url) =>
                       const Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
