@@ -57,7 +57,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   Widget build(BuildContext context) {
     // TODO: implement build
     super.build(context);
-    print('gridview 랜더링!');
+    //print('gridview 랜더링!');
     return Stack(
       children: [
         // GridView를 백그라운드에 배치
