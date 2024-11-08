@@ -87916,9 +87916,15 @@ $.azy()
 $.a_m().As("map-element",new A.apx(),!0)},
 J(a){return B.Nd}}
 A.apx.prototype={
-$1(a){var s=document.createElement("iframe")
-s.toString
-return s},
+$1(a){var s,r=document.createElement("iframe")
+r.src="assets/assets/map.html"
+s=r.style
+s.border="none"
+s=r.style
+s.width="100%"
+s=r.style
+s.height="350px"
+return r},
 $S:542}
 A.AB.prototype={
 ab(){return new A.Fc()}}
