@@ -34,7 +34,7 @@ class Home extends StatelessWidget {
                 CachedNetworkImage(
                   imageUrl:
                       'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
-                  width: 512,
+                  //  width: 512,
                   height: 512,
                 )
                 // Image.network(
@@ -48,7 +48,7 @@ class Home extends StatelessWidget {
                   imageUrl:
                       'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
                   fit: BoxFit.cover,
-                  width: 512,
+//                  width: 512,
                   height: 512,
                 )
 
@@ -139,7 +139,7 @@ class Home extends StatelessWidget {
               child: CachedNetworkImage(
                   imageUrl:
                       'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
-                  width: 512,
+                  //    width: 512,
                   height: 512)
 
               // Image.network(
