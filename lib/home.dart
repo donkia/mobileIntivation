@@ -354,7 +354,7 @@ class Home extends StatelessWidget {
                 TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(245, 224, 224, 1)),
+                    color: Color.fromRGBO(245, 224, 224, 1)),
             //color: const Color.fromRGBO(
             //245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
             //),
