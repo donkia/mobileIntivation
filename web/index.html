@@ -11,6 +11,8 @@
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="mobile_invitation">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -30,14 +32,24 @@
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>mobile_invitation</title>
-  <link rel="manifest" href="manifest.json">
+ <!-- <link rel="manifest" href="manifest.json"> -->
+  <link rel="manifest" href="/mobileIntivation/manifest.json">
+
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = null;
+    const serviceWorkerVersion = "v1";
   </script>
   
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <!-- 소스 맵 로드 오류 무시 -->
+  <script>
+  if (!navigator.userAgent.includes("Safari")) {
+    var script = document.createElement('script');
+    script.src = "flutter.js.map";
+    document.head.appendChild(script);
+  }
+</script>
 </head>
 <body>
   <script>
