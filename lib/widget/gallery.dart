@@ -28,6 +28,8 @@ class ImageGridScreen extends StatefulWidget {
 class _ImageGridScreenState extends State<ImageGridScreen>
     with AutomaticKeepAliveClientMixin<ImageGridScreen> {
   int? selectedIndex;
+  final cacheManager = CacheManager(Config('customCacheKey',
+      stalePeriod: const Duration(days: 7), maxNrOfCacheObjects: 50));
 
   final List<String> imagePaths = [
     //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
@@ -62,7 +64,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
       children: [
         // GridView를 백그라운드에 배치
         GridView.builder(
-          cacheExtent: 5000,
+          //cacheExtent: 1000,
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
