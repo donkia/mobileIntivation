@@ -30,7 +30,6 @@ class Home extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          /*
           SizedBox(
             //  width: 512,
             //height: 512,
@@ -64,7 +63,6 @@ class Home extends StatelessWidget {
               //child:
             ),
           ),
-          */
           const SizedBox(
             height: 20,
           ),
@@ -244,7 +242,7 @@ class Home extends StatelessWidget {
           ),
 
           //사진 갤러리 보여주기
-          // const SizedBox(height: 750, child: Gallery()),
+//          const SizedBox(height: 750, child: Gallery()),
 
           const SizedBox(
             height: 80,
@@ -324,7 +322,7 @@ class Home extends StatelessWidget {
           // 네이버 지도
           const SizedBox(
             height: 400,
-            // child: NaverMap(),
+            child: NaverMap(),
           ),
           // 지도 어플리케이션 연동
           const OpenMapApp(),

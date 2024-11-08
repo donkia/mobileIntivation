@@ -33,7 +33,6 @@ class FirebaseInit extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /*
     return FutureBuilder(
       // Firebase 초기화
       future: Firebase.initializeApp(
@@ -63,7 +62,6 @@ class FirebaseInit extends StatelessWidget {
           ),
         );
       },
-    );*/
-    return const Home();
+    );
   }
 }
