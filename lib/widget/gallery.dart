@@ -32,6 +32,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
       stalePeriod: const Duration(days: 7), maxNrOfCacheObjects: 20));
 
   final List<String> imagePaths = [
+    /*
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032054/15_1_mh2igl.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032060/14_1_kwgd9c.webp',
@@ -47,6 +48,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032055/2_1_kkxm1w.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/4_1_pbsvxf.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032049/3_1_p36u1i.webp',
+    */
   ];
 
   @override
