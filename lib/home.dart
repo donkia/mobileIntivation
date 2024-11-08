@@ -30,6 +30,7 @@ class Home extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
+          /*
           SizedBox(
             //  width: 512,
             //height: 512,
@@ -63,6 +64,7 @@ class Home extends StatelessWidget {
               //child:
             ),
           ),
+          */
           const SizedBox(
             height: 20,
           ),
