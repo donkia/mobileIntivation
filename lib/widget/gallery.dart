@@ -29,7 +29,7 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     with AutomaticKeepAliveClientMixin<ImageGridScreen> {
   int? selectedIndex;
   final cacheManager = CacheManager(Config('customCacheKey',
-      stalePeriod: const Duration(days: 7), maxNrOfCacheObjects: 50));
+      stalePeriod: const Duration(days: 7), maxNrOfCacheObjects: 20));
 
   final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
@@ -44,9 +44,9 @@ class _ImageGridScreenState extends State<ImageGridScreen>
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032058/5_1_yiguq0.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032050/8_1_zajbwl.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032052/7_1_iskity.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032055/2_1_kkxm1w.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/4_1_pbsvxf.webp',
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032049/3_1_p36u1i.webp',
+    //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032055/2_1_kkxm1w.webp',
+    //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/4_1_pbsvxf.webp',
+    //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032049/3_1_p36u1i.webp',
   ];
 
   @override
