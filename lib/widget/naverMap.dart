@@ -17,11 +17,11 @@ class _NaverMapState extends State<NaverMap> {
 
     // 'map-element' 타입을 등록
     ui.platformViewRegistry.registerViewFactory('map-element', (int viewId) {
-      final iframe = html.IFrameElement()
-        ..src = 'assets/assets/map.html'
-        ..style.border = 'none' // IFrame 테두리 제거
-        ..style.width = '100%' // 너비 100%
-        ..style.height = '350px'; // 높이를 원하는 픽셀 값으로 설정
+      final iframe = html.IFrameElement();
+      //..src = 'assets/assets/map.html'
+      //..style.border = 'none' // IFrame 테두리 제거
+      //..style.width = '100%' // 너비 100%
+      //..style.height = '350px'; // 높이를 원하는 픽셀 값으로 설정
       return iframe;
     });
   }
