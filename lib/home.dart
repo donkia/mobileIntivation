@@ -241,7 +241,7 @@ class Home extends StatelessWidget {
           ),
 
           //사진 갤러리 보여주기
-          //const SizedBox(height: 750, child: Gallery()),
+          const SizedBox(height: 750, child: Gallery()),
 
           const SizedBox(
             height: 80,
