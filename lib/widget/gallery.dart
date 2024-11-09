@@ -54,83 +54,41 @@ class _ImageGridScreenState extends State<ImageGridScreen>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Stack(
-      children: [
+    return //Stack(
+        //children: [
         GridView.builder(
-          cacheExtent: 500, // 화면 밖의 캐싱 범위 축소
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 1.0,
-            mainAxisExtent: 150.0,
-          ),
-          itemCount: imagePaths.length,
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index;
-                });
-              },
-              child: Card(
-                color: Colors.white,
-                child: CachedNetworkImage(
-                  imageUrl: imagePaths[index],
-                  fit: BoxFit.cover,
-                  cacheManager: cacheManager,
-                  //placeholder: (context, url) =>
-                  //const Center(child: CircularProgressIndicator()),
-                  // errorWidget: (context, url, error) => const Icon(Icons.error),
-                ),
-              ),
-            );
+      cacheExtent: 500, // 화면 밖의 캐싱 범위 축소
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        crossAxisSpacing: 1.0,
+        mainAxisExtent: 150.0,
+      ),
+      itemCount: imagePaths.length,
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedIndex = index;
+            });
           },
-        ),
-        if (selectedIndex != null) ...[
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                selectedIndex = null;
-              });
-            },
-            child: Container(
-              color: Colors.black54,
-              child: Center(
-                child: CachedNetworkImage(
-                  imageUrl: imagePaths[selectedIndex!],
-                  fit: BoxFit.contain,
-                  cacheManager: cacheManager,
-                ),
-              ),
+          child: Card(
+            color: Colors.white,
+            child: CachedNetworkImage(
+              imageUrl: imagePaths[index],
+              fit: BoxFit.cover,
+              cacheManager: cacheManager,
+              //placeholder: (context, url) =>
+              //const Center(child: CircularProgressIndicator()),
+              // errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
           ),
-          Positioned(
-            left: 20,
-            child: IconButton(
-              onPressed: () {
-                setState(() {
-                  selectedIndex = (selectedIndex! - 1 + imagePaths.length) %
-                      imagePaths.length;
-                });
-              },
-              icon: const Icon(Icons.arrow_back, color: Colors.white, size: 30),
-            ),
-          ),
-          Positioned(
-            right: 20,
-            child: IconButton(
-              onPressed: () {
-                setState(() {
-                  selectedIndex = (selectedIndex! + 1) % imagePaths.length;
-                });
-              },
-              icon: const Icon(Icons.arrow_forward,
-                  color: Colors.white, size: 30),
-            ),
-          ),
-        ],
-      ],
+        );
+      },
     );
+
+    // ],
+    //);
   }
 
   @override
