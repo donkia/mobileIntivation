@@ -68,7 +68,10 @@ class _ImageGridScreenState extends State<ImageGridScreen>
 
       itemCount: imagePaths.length,
       itemBuilder: (context, index) {
-        return CachedNetworkImage(
+        return Image.network(
+          imagePaths[index],
+        );
+        CachedNetworkImage(
           imageUrl: imagePaths[index],
           fit: BoxFit.cover,
           cacheManager: cacheManager,
