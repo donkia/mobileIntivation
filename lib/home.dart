@@ -397,8 +397,8 @@ class Home extends StatelessWidget {
                       imageUrl:
                           'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
                       fit: BoxFit.cover,
-                      height: 512,
-                      width: 512,
+                      //        height: 512,
+                      //width: 512,
                     )
 
                     // Image.network(
