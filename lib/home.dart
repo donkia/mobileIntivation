@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
                   imageUrl:
                       'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
                   //  width: 512,
-                  height: 512,
+                  // height: 512,
                 )
                 // Image.network(
                 //   //'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201839/3_m4vvht.webp',
@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
                       'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
                   fit: BoxFit.cover,
 //                  width: 512,
-                  height: 512,
+                  //  height: 512,
                 )
 
                     //     Image.network(
@@ -137,10 +137,11 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
               child: CachedNetworkImage(
-                  imageUrl:
-                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
-                  //    width: 512,
-                  height: 512)
+            imageUrl:
+                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+            //    width: 512,
+            //height: 512
+          )
 
               // Image.network(
               //   //   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729201840/2_pdb7km.webp',
