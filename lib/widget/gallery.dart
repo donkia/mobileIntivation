@@ -58,30 +58,34 @@ class _ImageGridScreenState extends State<ImageGridScreen>
         //children: [
         GridView.builder(
       cacheExtent: 500, // 화면 밖의 캐싱 범위 축소
-      physics: const NeverScrollableScrollPhysics(),
+      // physics: const NeverScrollableScrollPhysics(),
+
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
-        crossAxisSpacing: 1.0,
-        mainAxisExtent: 150.0,
+        //crossAxisSpacing: 1.0,
+        //mainAxisExtent: 150.0,
       ),
+
       itemCount: imagePaths.length,
       itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            setState(() {
-              selectedIndex = index;
-            });
-          },
-          child: Card(
-            color: Colors.white,
-            child: CachedNetworkImage(
-              imageUrl: imagePaths[index],
-              fit: BoxFit.cover,
-              cacheManager: cacheManager,
-              //placeholder: (context, url) =>
-              //const Center(child: CircularProgressIndicator()),
-              // errorWidget: (context, url, error) => const Icon(Icons.error),
-            ),
+        return CachedNetworkImage(
+          imageUrl: imagePaths[index],
+          fit: BoxFit.cover,
+          cacheManager: cacheManager,
+          //placeholder: (context, url) =>
+          //const Center(child: CircularProgressIndicator()),
+          // errorWidget: (context, url, error) => const Icon(Icons.error),
+        );
+
+        return Card(
+          color: Colors.white,
+          child: CachedNetworkImage(
+            imageUrl: imagePaths[index],
+            fit: BoxFit.cover,
+            cacheManager: cacheManager,
+            //placeholder: (context, url) =>
+            //const Center(child: CircularProgressIndicator()),
+            // errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         );
       },
