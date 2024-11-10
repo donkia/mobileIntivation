@@ -257,19 +257,12 @@ class Home extends StatelessWidget {
           //사진 갤러리 보여주기
           //SizedBox(height: 750, child: Gallery()),
           SizedBox(
-            height: 500,
-            child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                ),
-                itemCount: imagePaths.length,
-                itemBuilder: (context, index) {
-                  return Image.network(
-                    imagePaths[index],
-                    fit: BoxFit.cover,
-                  );
-                }),
-          ),
+              height: 500,
+              child: GridView.count(
+                physics: const NeverScrollableScrollPhysics(),
+                crossAxisCount: 3,
+                children: imagePaths.map((url) => Image.network(url)).toList(),
+              )),
 
           const SizedBox(
             height: 80,
