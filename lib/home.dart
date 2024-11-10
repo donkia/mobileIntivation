@@ -263,31 +263,63 @@ class Home extends StatelessWidget {
             height: 80,
           ),
 
-          //사진 갤러리 보여주기
-          //SizedBox(height: 750, child: Gallery()),
-          // SizedBox(
-          //     height: 500,
-          //     child: GridView.count(
-          //       physics: const NeverScrollableScrollPhysics(),
-          //       crossAxisCount: 3,
-          //       children: imagePaths.map((url) => Image.network(url)).toList(),
-          //     )),
+          // 사진 갤러리 보여주기
           SizedBox(
-            height: 700,
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731224462/gallery_plbv6w.webp',
+            width: 30,
+            height: 30,
+            color: const Color.fromRGBO(245, 224, 224, 1),
+          )),
+
+          Text(
+            'Gallery',
+            textAlign: TextAlign.left,
+            style: GoogleFonts.notoSerif(
+                textStyle:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                color: const Color.fromRGBO(
+                    245, 224, 224, 1) // 여기서 1은 불투명도를 의미합니다.
+                ),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child:
+                Divider(thickness: 1, color: Color.fromRGBO(245, 224, 224, 1)),
+          ),
+
+          //사진 갤러리 보여주기
+          SizedBox(
+            height: 500,
             child: PageView.builder(
               itemCount: imagePaths.length,
+              controller: PageController(viewportFraction: 0.9),
               itemBuilder: (context, index) {
-                return Image.network(
-                  imagePaths[index],
-                  fit: BoxFit.contain,
+                return Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image.network(
+                      imagePaths[index],
+                      fit: BoxFit.contain,
+                    ),
+                    const Positioned(
+                      bottom: 10,
+                      child: AnimatedOpacity(
+                        opacity: 1.0,
+                        duration: Duration(milliseconds: 500),
+                      ),
+                    ),
+                  ],
                 );
               },
             ),
           ),
+
           const SizedBox(
             height: 80,
           ),
 
+          // 오시는길
           SizedBox(
               child: Image.network(
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
