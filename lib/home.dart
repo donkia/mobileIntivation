@@ -50,6 +50,9 @@ class Home extends StatelessWidget {
               children: [
                 Image.network(
                   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+                  //  width: 891, // 화면의 25% 크기로 설정
+                  //  height: 1260
+
                   //  width: 512,
                   // height: 512,
                 )
@@ -61,6 +64,10 @@ class Home extends StatelessWidget {
                 ,
                 Positioned.fill(
                     child: Image.network(
+                  height:
+                      MediaQuery.of(context).size.width * 1, // 화면의 25% 크기로 설정
+                  width:
+                      MediaQuery.of(context).size.width * 1, // 화면의 25% 크기로 설정
                   'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
                   fit: BoxFit.cover,
 //                  width: 512,
@@ -152,8 +159,10 @@ class Home extends StatelessWidget {
           SizedBox(
               child: Image.network(
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+            //    width: 4480,
+            //   height: 6720,
             //    width: 512,
-            //height: 512
+            // height: 512
           )
 
               // Image.network(
@@ -219,6 +228,8 @@ class Home extends StatelessWidget {
             'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
             width: MediaQuery.of(context).size.width * 1,
             height: MediaQuery.of(context).size.width,
+            // width: 6720,
+            //height: 4480,
           )
 
               // Image.network(
@@ -254,14 +265,25 @@ class Home extends StatelessWidget {
 
           //사진 갤러리 보여주기
           //SizedBox(height: 750, child: Gallery()),
+          // SizedBox(
+          //     height: 500,
+          //     child: GridView.count(
+          //       physics: const NeverScrollableScrollPhysics(),
+          //       crossAxisCount: 3,
+          //       children: imagePaths.map((url) => Image.network(url)).toList(),
+          //     )),
           SizedBox(
-              height: 500,
-              child: GridView.count(
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisCount: 3,
-                children: imagePaths.map((url) => Image.network(url)).toList(),
-              )),
-
+            height: 700,
+            child: PageView.builder(
+              itemCount: imagePaths.length,
+              itemBuilder: (context, index) {
+                return Image.network(
+                  imagePaths[index],
+                  fit: BoxFit.contain,
+                );
+              },
+            ),
+          ),
           const SizedBox(
             height: 80,
           ),
