@@ -27973,11 +27973,10 @@ Nz:function Nz(a){this.a=a},
 LP:function LP(a){this.a=a},
 a7i:function a7i(){},
 A1:function A1(a){this.a=a},
-UJ:function UJ(a,b,c){var _=this
+UJ:function UJ(a,b){var _=this
 _.d=a
 _.e=!1
 _.f=b
-_.r=c
 _.c=_.a=null},
 apE:function apE(a){this.a=a},
 apC:function apC(a){this.a=a},
@@ -94225,8 +94224,7 @@ $2(a,b){if(b.a===B.h_)return B.HS
 return B.PL},
 $S:536}
 A.A1.prototype={
-ad(){var s=t.s
-return new A.UJ(A.aEN(0,0.9),A.a(["https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032054/15_1_mh2igl.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032060/14_1_kwgd9c.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032056/13_1_jrpijc.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731232533/21_qu2ivy.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032051/6_1_qkpld6.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032046/11_1_joqpkn.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/17_1_rw98i7.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032047/10_1_kxrlzk.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032041/9_1_izl4xr.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032058/5_1_yiguq0.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032050/8_1_zajbwl.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032052/7_1_iskity.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032055/2_1_kkxm1w.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032042/4_1_pbsvxf.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032049/3_1_p36u1i.webp"],s),A.a(["https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236303/15_mdacnf.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236309/14_v8qnqq.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236301/12_o9cubt.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236302/13_jczufb.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236307/21_qrx6iv.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236295/6_khowex.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236300/11_fdraoy.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236304/17_fszw3n.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236299/10_dbb4cd.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236297/9_lqcizj.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236294/5_nukj9o.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236296/8_i1kaw1.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236295/7_sczo6p.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236291/2_s7se1a.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236292/4_mojldd.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236292/3_kx2zi4.webp"],s))}}
+ad(){return new A.UJ(A.aEN(0,0.9),A.a(["https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236303/15_mdacnf.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236309/14_v8qnqq.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236301/12_o9cubt.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236302/13_jczufb.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236292/4_mojldd.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236307/21_qrx6iv.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236299/10_dbb4cd.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236295/6_khowex.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236300/11_fdraoy.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236304/17_fszw3n.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236297/9_lqcizj.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236294/5_nukj9o.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236296/8_i1kaw1.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236295/7_sczo6p.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236292/3_kx2zi4.webp","https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236291/2_s7se1a.webp"],t.s))}}
 A.UJ.prototype={
 J(a){var s=this.d
 return A.hv(A.a([A.d1(A.aEQ(s,new A.apD(this),16,new A.apE(this),null),500,null),B.RQ,new A.Do(s,B.a00,16,null)],t.p),B.L,B.af,B.O)}}
@@ -94239,7 +94237,7 @@ A.apC.prototype={
 $0(){this.a.e=!0},
 $S:0}
 A.apD.prototype={
-$2(a,b){var s=null,r=this.a,q=A.a([A.h_(r.r[b],s,B.Cl,s,s)],t.p)
+$2(a,b){var s=null,r=this.a,q=A.a([A.h_(r.f[b],s,B.Cl,s,s)],t.p)
 if(b===0&&!r.e)q.push(A.OO(s,new A.Kz(B.Ha,new A.B0(new A.JK("assets/animations/swipe_hint.json",s,s,s,s,!1),s,s,s,s,s,s,s,s,s,80,80,s,s,s,s,s,s,s,s),s),s,s,s,s,s,s))
 return A.kA(B.P,q,B.a9,B.bD,s)},
 $S:537}
