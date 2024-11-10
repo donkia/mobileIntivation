@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class GuestBook extends StatefulWidget {
   final VoidCallback onSubmitted;
@@ -43,7 +44,11 @@ class _GuestBookState extends State<GuestBook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('축하인사 전하기')),
+      appBar: AppBar(
+          title: Text(
+        '축하인사 전하기',
+        style: GoogleFonts.notoSerif(fontSize: 14, fontWeight: FontWeight.w700),
+      )),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Form(
@@ -53,7 +58,8 @@ class _GuestBookState extends State<GuestBook> {
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: const InputDecoration(labelText: '작성자 이름'),
+                decoration: const InputDecoration(
+                    labelText: '작성자 이름', labelStyle: TextStyle(fontSize: 12)),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return '이름을 입력해주세요';
@@ -63,7 +69,8 @@ class _GuestBookState extends State<GuestBook> {
               ),
               const SizedBox(height: 10),
               DropdownButtonFormField<String>(
-                decoration: const InputDecoration(labelText: '축하인사 대상자'),
+                decoration: const InputDecoration(
+                    labelText: '축하인사 대상자', labelStyle: TextStyle(fontSize: 12)),
                 value: _selectedRole,
                 items: ['신랑', '신부'].map((role) {
                   return DropdownMenuItem(value: role, child: Text(role));
@@ -85,6 +92,7 @@ class _GuestBookState extends State<GuestBook> {
                 controller: _messageController,
                 decoration: const InputDecoration(
                   labelText: '인사말을 남겨주세요!',
+                  labelStyle: TextStyle(fontSize: 12),
                   border: OutlineInputBorder(),
                 ),
                 maxLines: 3,
@@ -100,7 +108,10 @@ class _GuestBookState extends State<GuestBook> {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: _submitForm,
-                child: const Text('제출'),
+                child: const Text(
+                  '제출',
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
               ),
             ],
           ),
