@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
             child: Stack(
               children: [
                 Image.network(
-                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236305/19_nlx6ii.webp',
                   //  width: 891, // 화면의 25% 크기로 설정
                   //  height: 1260
 
@@ -138,7 +138,7 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
               child: Image.network(
-            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236304/16_ilgvfo.webp',
             //    width: 4480,
             //   height: 6720,
             //    width: 512,
@@ -205,9 +205,7 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
               child: Image.network(
-            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
-            width: MediaQuery.of(context).size.width * 1,
-            height: MediaQuery.of(context).size.width,
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236311/18_vzujye.webp',
             // width: 6720,
             //height: 4480,
           )
@@ -225,8 +223,8 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-
           const CustomCalendar(),
+
           const SizedBox(
             height: 15,
           ),
@@ -411,7 +409,7 @@ class Home extends StatelessWidget {
           ),
           SizedBox(
             child: Image.network(
-              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731232533/20_f82bnj.jpg',
+              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236306/20_v1blfn.webp',
             ),
           ),
 
