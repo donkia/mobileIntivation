@@ -33,25 +33,31 @@ class _GalleryState extends State<Gallery> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
+    return // Stack(
+        //children: [
         // GridView를 백그라운드에 배치
         GridView.builder(
-          //cacheExtent: 1000,
-          physics: const NeverScrollableScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
-          itemCount: imagePaths.length,
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () {
-                setState(() {
-                  selectedIndex = index; // 선택된 인덱스를 저장
-                });
-              },
-              child: Card(
-                color: Colors.white,
-                child: CachedNetworkImage(
+      //cacheExtent: 1000,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
+      itemCount: imagePaths.length,
+      itemBuilder: (context, index) {
+        return GestureDetector(
+          onTap: () {
+            setState(() {
+              selectedIndex = index; // 선택된 인덱스를 저장
+            });
+          },
+          child: Card(
+            color: Colors.white,
+            child: Image.network(
+              imagePaths[index],
+              fit: BoxFit.cover,
+            ),
+
+/*                
+                CachedNetworkImage(
                   imageUrl: imagePaths[index],
                   fit: BoxFit.cover,
                   memCacheHeight: 150,
@@ -59,11 +65,13 @@ class _GalleryState extends State<Gallery> {
                       const Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
-              ),
-            );
-          },
-        ),
-        // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
+                */
+          ),
+        );
+      },
+    );
+    // 선택된 이미지가 있을 때만 상세 이미지를 보여줌
+    /*
         if (selectedIndex != null) ...[
           // 백그라운드 블러 처리 (선택적으로)
           Container(
@@ -135,8 +143,9 @@ class _GalleryState extends State<Gallery> {
             ),
           ),
         ],
-      ],
-    );
+   //   ],
+  //  );
+  */
   }
 }
 
