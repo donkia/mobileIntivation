@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobile_invitation/widget/GallerypageView.dart';
 import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/bottom.dart';
 import 'package:mobile_invitation/widget/customCalendar.dart';
@@ -289,32 +290,7 @@ class Home extends StatelessWidget {
           ),
 
           //사진 갤러리 보여주기
-          SizedBox(
-            height: 500,
-            child: PageView.builder(
-              itemCount: imagePaths.length,
-              controller: PageController(viewportFraction: 0.9),
-              itemBuilder: (context, index) {
-                return Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.network(
-                      imagePaths[index],
-                      fit: BoxFit.contain,
-                    ),
-                    const Positioned(
-                      bottom: 10,
-                      child: AnimatedOpacity(
-                        opacity: 1.0,
-                        duration: Duration(milliseconds: 500),
-                      ),
-                    ),
-                  ],
-                );
-              },
-            ),
-          ),
-
+          const SizedBox(height: 550, child: GalleryPageView()),
           const SizedBox(
             height: 80,
           ),
