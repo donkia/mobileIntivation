@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    debugInvertOversizedImages = true;
+
     return MaterialApp(
       home: const FirebaseInit(),
       theme: ThemeData(
