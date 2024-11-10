@@ -71,6 +71,7 @@ flutter:
     - assets/images/
     - assets/map.html
     - assets/assets/animations/swipe_hint.json # 애니메이션 파일 경로
+    - assets/animations/swipe_hint.json # 애니메이션 파일 경로
   # fonts:
   #   - family: MaruBuri
   #     fonts:
