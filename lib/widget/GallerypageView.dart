@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:lottie/lottie.dart';
 
 class GalleryPageView extends StatefulWidget {
   const GalleryPageView({super.key});
@@ -10,6 +11,7 @@ class GalleryPageView extends StatefulWidget {
 
 class _GalleryPageViewState extends State<GalleryPageView> {
   final PageController _pageController = PageController(viewportFraction: 0.9);
+  bool _isLottieShown = false; // Track if Lottie animation was shown
 
   final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
@@ -34,30 +36,45 @@ class _GalleryPageViewState extends State<GalleryPageView> {
     return Column(
       children: [
         SizedBox(
-          height: 500,
-          child: PageView.builder(
-            itemCount: imagePaths.length,
-            controller: _pageController,
-            itemBuilder: (context, index) {
-              return Stack(
-                alignment: Alignment.center,
-                children: [
-                  Image.network(
-                    imagePaths[index],
-                    fit: BoxFit.contain,
-                  ),
-                  const Positioned(
-                    bottom: 10,
-                    child: AnimatedOpacity(
-                      opacity: 1.0,
-                      duration: Duration(milliseconds: 500),
+            height: 500,
+            child: PageView.builder(
+              controller: _pageController,
+              itemCount: imagePaths.length,
+              onPageChanged: (index) {
+                if (index != 0) {
+                  setState(() {
+                    _isLottieShown =
+                        true; // Set to true when leaving first page
+                  });
+                }
+              },
+              itemBuilder: (context, index) {
+                return Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Image.network(
+                      imagePaths[index],
+                      fit: BoxFit.contain,
                     ),
-                  ),
-                ],
-              );
-            },
-          ),
-        ),
+                    if (index == 0 && !_isLottieShown)
+                      Positioned(
+                        child: ColorFiltered(
+                          colorFilter: const ColorFilter.mode(
+                            Color.fromRGBO(
+                                245, 224, 224, 1), // Specify the desired color
+                            BlendMode.srcATop, // Blend mode to apply color
+                          ),
+                          child: Lottie.asset(
+                            'assets/animations/swipe_hint.json',
+                            width: 80,
+                            height: 80,
+                          ),
+                        ),
+                      ),
+                  ],
+                );
+              },
+            )),
         const SizedBox(height: 16),
         SmoothPageIndicator(
           controller: _pageController, // PageView의 controller와 동일하게 설정
