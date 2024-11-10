@@ -34,7 +34,7 @@ class Gallery extends StatelessWidget {
         // GridView를 백그라운드에 배치
         GridView.builder(
       //cacheExtent: 1000,
-      physics: const NeverScrollableScrollPhysics(),
+      //   physics: const NeverScrollableScrollPhysics(),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
       itemCount: imagePaths.length,
