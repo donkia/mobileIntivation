@@ -31,9 +31,8 @@ class Home extends StatelessWidget {
           SizedBox(
             child: Stack(
               children: [
-                CachedNetworkImage(
-                  imageUrl:
-                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
+                Image.network(
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729905546/19_rxpjdy.webp',
                   //  width: 512,
                   // height: 512,
                 )
@@ -44,9 +43,8 @@ class Home extends StatelessWidget {
                 // ),
                 ,
                 Positioned.fill(
-                    child: CachedNetworkImage(
-                  imageUrl:
-                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
+                    child: Image.network(
+                  'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729779457/snow_mmgitq.png',
                   fit: BoxFit.cover,
 //                  width: 512,
                   //  height: 512,
@@ -92,9 +90,8 @@ class Home extends StatelessWidget {
           ),
 
           SizedBox(
-              child: CachedNetworkImage(
-            imageUrl:
-                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729895485/leaf1_tamo4w.png',
             color: const Color.fromRGBO(245, 224, 224, 1),
             width: 50,
             height: 50,
@@ -136,9 +133,8 @@ class Home extends StatelessWidget {
             height: 20,
           ),
           SizedBox(
-              child: CachedNetworkImage(
-            imageUrl:
-                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904922/16_e9uiwp.webp',
             //    width: 512,
             //height: 512
           )
@@ -202,9 +198,8 @@ class Home extends StatelessWidget {
             ],
           ),
           SizedBox(
-              child: CachedNetworkImage(
-            imageUrl:
-                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904925/18_fhsr0p.webp',
             width: MediaQuery.of(context).size.width * 1,
             height: MediaQuery.of(context).size.width,
           )
@@ -248,9 +243,8 @@ class Home extends StatelessWidget {
           ),
 
           SizedBox(
-              child: CachedNetworkImage(
-            imageUrl:
-                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729901963/location_ihcw6p.png',
             width: 30,
             height: 30,
             color: const Color.fromRGBO(245, 224, 224, 1),
@@ -326,9 +320,8 @@ class Home extends StatelessWidget {
           ),
 
           SizedBox(
-              child: CachedNetworkImage(
-            imageUrl:
-                'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png',
+              child: Image.network(
+            'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729902480/information2_in126f.png',
             color: const Color.fromRGBO(245, 224, 224, 1),
             width: 30,
             height: 30,
@@ -393,9 +386,8 @@ class Home extends StatelessWidget {
                       Colors.black.withOpacity(0.4),
                       BlendMode.darken,
                     ),
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
+                    child: Image.network(
+                      'https://res.cloudinary.com/dzlinhsg8/image/upload/v1729904914/1_pftzdc.webp',
                       fit: BoxFit.cover,
                       //        height: 512,
                       //width: 512,
