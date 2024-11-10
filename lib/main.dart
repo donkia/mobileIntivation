@@ -58,7 +58,7 @@ class FirebaseInit extends StatelessWidget {
                   size: 50,
                 ),
                 SizedBox(height: 20), // 간격
-                Text('청첩장을 준비 중입니다.방문해주셔서 감사드립니다!'),
+                Text('병현❤️슬기 청첩장을 준비 중입니다.\n방문해주셔서 감사드립니다. 항상 행복하세요❤️'),
               ],
             ), // 로딩 애니메이션
           ),
