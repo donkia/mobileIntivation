@@ -135,11 +135,11 @@ class _AccountState extends State<Account> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('  신부 유슬기 : 기업은행 01051313325     '),
+                    const Text('  신부 유슬기 : 기업은행 043-118816-01-011'),
                     IconButton(
                         onPressed: () {
                           Clipboard.setData(
-                              const ClipboardData(text: '01051313325'));
+                              const ClipboardData(text: '04311881601011'));
                         },
                         icon: const Icon(
                           Icons.copy,
