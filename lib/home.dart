@@ -430,6 +430,12 @@ class Home extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
+          SizedBox(
+            child: Image.network(
+              'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731232533/20_f82bnj.jpg',
+            ),
+          ),
+
 /*
           SizedBox(
             width: double.infinity,
