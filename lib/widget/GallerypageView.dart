@@ -14,9 +14,9 @@ class _GalleryPageViewState extends State<GalleryPageView> {
   bool _isLottieShown = false; // Track if Lottie animation was shown
 
   final List<String> imagePaths = [
-    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032054/15_1_mh2igl.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032060/14_1_kwgd9c.webp',
+    'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032056/13_1_jrpijc.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731232533/21_qu2ivy.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032051/6_1_qkpld6.webp',
