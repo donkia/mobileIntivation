@@ -2,15 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
-class Gallery extends StatefulWidget {
-  const Gallery({super.key});
+class Gallery extends StatelessWidget {
+  Gallery({super.key});
 
-  @override
-  State<Gallery> createState() => _GalleryState();
-}
-
-class _GalleryState extends State<Gallery> {
   int? selectedIndex;
+
   final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032061/12_1_ahxkno.webp',
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1730032054/15_1_mh2igl.webp',
@@ -43,30 +39,20 @@ class _GalleryState extends State<Gallery> {
           crossAxisCount: 3, crossAxisSpacing: 1.0, mainAxisExtent: 150.0),
       itemCount: imagePaths.length,
       itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            setState(() {
-              selectedIndex = index; // 선택된 인덱스를 저장
-            });
-          },
-          child: Card(
-            color: Colors.white,
-            child: Image.network(
-              imagePaths[index],
-              fit: BoxFit.cover,
-            ),
+        return Image.network(
+          imagePaths[index],
+          fit: BoxFit.cover,
 
-/*                
-                CachedNetworkImage(
-                  imageUrl: imagePaths[index],
-                  fit: BoxFit.cover,
-                  memCacheHeight: 150,
-                  placeholder: (context, url) =>
-                      const Center(child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
-                ),
-                */
-          ),
+          /*                
+              CachedNetworkImage(
+                imageUrl: imagePaths[index],
+                fit: BoxFit.cover,
+                memCacheHeight: 150,
+                placeholder: (context, url) =>
+                    const Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+              ),
+              */
         );
       },
     );
