@@ -176,7 +176,7 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '김상동﹒최계봉',
+                '김상동·최계봉',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               Text('의 아들'),
@@ -193,7 +193,7 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '유성일﹒조선옥',
+                '유성일·조선옥',
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               Text('의   딸  '),
