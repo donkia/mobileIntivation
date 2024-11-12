@@ -18,7 +18,7 @@ class _AccountState extends State<Account> {
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         SizedBox(
-          width: 400,
+          width: MediaQuery.of(context).size.width,
           child: OutlinedButton(
             onPressed: () {
               setState(() {
@@ -107,7 +107,7 @@ class _AccountState extends State<Account> {
           ),
         const SizedBox(height: 10),
         SizedBox(
-          width: 400,
+          width: MediaQuery.of(context).size.width,
           child: OutlinedButton(
             onPressed: () {
               setState(() {
