@@ -5,7 +5,6 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:mobile_invitation/home.dart';
 import 'firebase_options.dart'; // Firebase CLI로 생성된 파일
 
-FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //await Firebase.initializeApp(
@@ -24,9 +23,6 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       home: const FirebaseInit(),
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: analytics),
-      ],
       theme: ThemeData(
           //   fontFamily: 'MaruBuri',
           primaryColor: Colors.white,
