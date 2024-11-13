@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobile_invitation/main.dart';
 import 'package:mobile_invitation/widget/GallerypageView.dart';
 import 'package:mobile_invitation/widget/account.dart';
 import 'package:mobile_invitation/widget/bottom.dart';
@@ -25,6 +27,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseAnalytics.instance.logScreenView(screenName: 'home');
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(
