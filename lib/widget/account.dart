@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,9 +12,12 @@ class Account extends StatefulWidget {
 class _AccountState extends State<Account> {
   bool menShowData = false;
   bool womenShowData = false;
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   @override
   Widget build(BuildContext context) {
+    analytics
+        .logEvent(name: 'page_view', parameters: {'page_name': 'account_page'});
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -21,6 +25,10 @@ class _AccountState extends State<Account> {
           width: MediaQuery.of(context).size.width,
           child: OutlinedButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼] 신랑측 계좌번호'});
+
               setState(() {
                 menShowData = !menShowData;
               });
@@ -56,6 +64,12 @@ class _AccountState extends State<Account> {
                         children: [
                           IconButton(
                               onPressed: () {
+                                analytics.logEvent(
+                                    name: 'button_click',
+                                    parameters: {
+                                      'button_name': '[버튼] copy 신랑 계좌번호'
+                                    });
+
                                 Clipboard.setData(
                                     const ClipboardData(text: '110475039706'));
                               },
@@ -75,6 +89,10 @@ class _AccountState extends State<Account> {
                     const Text('  신랑 아버지 : 국민은행 513925-01-035551'),
                     IconButton(
                         onPressed: () {
+                          analytics.logEvent(name: 'button_click', parameters: {
+                            'button_name': '[버튼] copy 신랑 아버지 계좌번호'
+                          });
+
                           Clipboard.setData(
                               const ClipboardData(text: '51392501035551'));
                         },
@@ -93,6 +111,10 @@ class _AccountState extends State<Account> {
                     const Text('  신랑 어머니 : 우리은행 1002-856-058754'),
                     IconButton(
                         onPressed: () {
+                          analytics.logEvent(name: 'button_click', parameters: {
+                            'button_name': '[버튼] copy 신랑 어머니 계좌번호'
+                          });
+
                           Clipboard.setData(
                               const ClipboardData(text: '1002856058754'));
                         },
@@ -110,6 +132,9 @@ class _AccountState extends State<Account> {
           width: MediaQuery.of(context).size.width,
           child: OutlinedButton(
             onPressed: () {
+              analytics.logEvent(
+                  name: 'button_click',
+                  parameters: {'button_name': '[버튼] 신부측 계좌번호'});
               setState(() {
                 womenShowData = !womenShowData;
               });
@@ -138,6 +163,9 @@ class _AccountState extends State<Account> {
                     const Text('  신부 유슬기 : 기업은행 043-118816-01-011'),
                     IconButton(
                         onPressed: () {
+                          analytics.logEvent(
+                              name: 'button_click',
+                              parameters: {'button_name': '[버튼] copy 신부 계좌번호'});
                           Clipboard.setData(
                               const ClipboardData(text: '04311881601011'));
                         },
@@ -156,6 +184,9 @@ class _AccountState extends State<Account> {
                     const Text('  신부 아버지 : 기업은행 033-074504-02-012'),
                     IconButton(
                         onPressed: () {
+                          analytics.logEvent(name: 'button_click', parameters: {
+                            'button_name': '[버튼] copy 신부 아버지 계좌번호'
+                          });
                           Clipboard.setData(
                               const ClipboardData(text: '03307450402012'));
                         },
@@ -174,6 +205,9 @@ class _AccountState extends State<Account> {
                     const Text('  신부 어머니 : 국민은행 933901-01-078633 '),
                     IconButton(
                         onPressed: () {
+                          analytics.logEvent(name: 'button_click', parameters: {
+                            'button_name': '[버튼] copy 신부 어머니 계좌번호'
+                          });
                           Clipboard.setData(
                               const ClipboardData(text: '93390101078633'));
                         },

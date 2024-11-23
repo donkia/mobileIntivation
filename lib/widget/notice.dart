@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:mobile_invitation/widget/guestBook.dart';
 
@@ -10,9 +11,13 @@ class Notice extends StatefulWidget {
 
 class _NoticeState extends State<Notice> {
   bool _showGuestBook = false;
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   // GuestBook 토글 함수
   void _toggleGuestBook() {
+    analytics.logEvent(
+        name: 'button_click', parameters: {'button_name': '[버튼] 축하의 인사 남기기'});
+
     setState(() {
       _showGuestBook = !_showGuestBook;
     });

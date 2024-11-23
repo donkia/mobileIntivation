@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:lottie/lottie.dart';
@@ -12,6 +13,7 @@ class GalleryPageView extends StatefulWidget {
 class _GalleryPageViewState extends State<GalleryPageView> {
   final PageController _pageController = PageController(viewportFraction: 0.9);
   bool _isLottieShown = false; // Track if Lottie animation was shown
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   final List<String> imagePaths = [
     'https://res.cloudinary.com/dzlinhsg8/image/upload/v1731236303/15_mdacnf.webp',
@@ -62,6 +64,10 @@ class _GalleryPageViewState extends State<GalleryPageView> {
                 }
               },
               itemBuilder: (context, index) {
+                analytics.logEvent(
+                    name: 'page_view',
+                    parameters: {'page_name': '$index 번째 사진 load'});
+
                 return Stack(
                   alignment: Alignment.center,
                   children: [
